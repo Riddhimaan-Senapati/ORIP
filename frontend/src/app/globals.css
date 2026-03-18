@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --bg-base: #080d1a;
+  --bg-surface: #0e1629;
+  --bg-elevated: #141f38;
+  --border: rgba(0, 210, 255, 0.12);
+  --border-strong: rgba(0, 210, 255, 0.25);
+
+  --cyan: #00d2ff;
+  --cyan-dim: rgba(0, 210, 255, 0.15);
+  --amber: #f59e0b;
+  --amber-dim: rgba(245, 158, 11, 0.15);
+  --rose: #f43f5e;
+  --rose-dim: rgba(244, 63, 94, 0.15);
+  --emerald: #10b981;
+  --emerald-dim: rgba(16, 185, 129, 0.15);
+
+  --text-primary: #e2eaff;
+  --text-secondary: rgba(226, 234, 255, 0.55);
+  --text-dim: rgba(226, 234, 255, 0.3);
+
+  --font-display: "Syne", sans-serif;
+  --font-mono: "DM Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Grid background texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 210, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: -200px;
+  left: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
+
+@keyframes ring-fill {
+  from { stroke-dashoffset: 314; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(244, 63, 94, 0); }
+}
+
+@keyframes chat-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up { animation: fade-up 0.5s ease forwards; }
+.animate-fade-up-1 { animation: fade-up 0.5s ease 0.05s forwards; opacity: 0; }
+.animate-fade-up-2 { animation: fade-up 0.5s ease 0.1s forwards; opacity: 0; }
+.animate-fade-up-3 { animation: fade-up 0.5s ease 0.15s forwards; opacity: 0; }
+.animate-fade-up-4 { animation: fade-up 0.5s ease 0.2s forwards; opacity: 0; }
+.animate-fade-up-5 { animation: fade-up 0.5s ease 0.25s forwards; opacity: 0; }
+.animate-fade-up-6 { animation: fade-up 0.5s ease 0.3s forwards; opacity: 0; }
+.animate-fade-up-7 { animation: fade-up 0.5s ease 0.35s forwards; opacity: 0; }
+.animate-fade-up-8 { animation: fade-up 0.5s ease 0.4s forwards; opacity: 0; }
+
+.critical-pulse { animation: pulse-glow 2s ease-in-out infinite; }
+
+.chat-message { animation: chat-in 0.3s ease forwards; }
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.card-critical {
+  border-color: rgba(244, 63, 94, 0.35) !important;
+  box-shadow: 0 0 24px rgba(244, 63, 94, 0.1);
+}
+
+.card-warning {
+  border-color: rgba(245, 158, 11, 0.35) !important;
+  box-shadow: 0 0 24px rgba(245, 158, 11, 0.1);
+}
+
+.card-good {
+  border-color: rgba(16, 185, 129, 0.35) !important;
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.08);
+}
+
+table { width: 100%; border-collapse: collapse; }
+
+th {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 10px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0, 210, 255, 0.05);
+  font-size: 14px;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(0, 210, 255, 0.025); }

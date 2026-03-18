@@ -1,0 +1,237 @@
+[
+  {
+    "role_id": "ROLE-RN",
+    "cert_id": "CERT-BLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RN",
+    "cert_id": "CERT-ACLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RN",
+    "cert_id": "CERT-RN-LIC",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RN",
+    "cert_id": "CERT-HIPAA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RN",
+    "cert_id": "CERT-IC",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RN",
+    "cert_id": "CERT-BBP",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "cert_id": "CERT-BLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "cert_id": "CERT-LPN-LIC",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "cert_id": "CERT-HIPAA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "cert_id": "CERT-IC",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "cert_id": "CERT-BBP",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "cert_id": "CERT-BLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "cert_id": "CERT-ACLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "cert_id": "CERT-PALS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "cert_id": "CERT-DEA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "cert_id": "CERT-HIPAA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-PA",
+    "cert_id": "CERT-BLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-PA",
+    "cert_id": "CERT-ACLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-PA",
+    "cert_id": "CERT-DEA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-PA",
+    "cert_id": "CERT-HIPAA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-PA",
+    "cert_id": "CERT-IC",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RT",
+    "cert_id": "CERT-BLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RT",
+    "cert_id": "CERT-ACLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RT",
+    "cert_id": "CERT-RT-LIC",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RT",
+    "cert_id": "CERT-HIPAA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RT",
+    "cert_id": "CERT-IC",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RT",
+    "cert_id": "CERT-BBP",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "cert_id": "CERT-BLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "cert_id": "CERT-ARRT",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "cert_id": "CERT-HIPAA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "cert_id": "CERT-BBP",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "cert_id": "CERT-BLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "cert_id": "CERT-PTCB",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "cert_id": "CERT-HIPAA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "cert_id": "CERT-BLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "cert_id": "CERT-HIPAA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "cert_id": "CERT-BBP",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "cert_id": "CERT-IC",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-ST",
+    "cert_id": "CERT-BLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-ST",
+    "cert_id": "CERT-NBSTSA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-ST",
+    "cert_id": "CERT-HIPAA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-ST",
+    "cert_id": "CERT-IC",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-ST",
+    "cert_id": "CERT-BBP",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-NA",
+    "cert_id": "CERT-BLS",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-NA",
+    "cert_id": "CERT-CNA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-NA",
+    "cert_id": "CERT-HIPAA",
+    "is_mandatory": true
+  },
+  {
+    "role_id": "ROLE-NA",
+    "cert_id": "CERT-BBP",
+    "is_mandatory": true
+  }
+]

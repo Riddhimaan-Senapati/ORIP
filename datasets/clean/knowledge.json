@@ -1,0 +1,104 @@
+[
+  {
+    "knowledge_id": "KNW-001",
+    "onet_element_id": "2.C.1.a",
+    "name": "Administration and Management",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-002",
+    "onet_element_id": "2.C.1.b",
+    "name": "Administrative",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-003",
+    "onet_element_id": "2.C.1.e",
+    "name": "Customer and Personal Service",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-004",
+    "onet_element_id": "2.C.2.a",
+    "name": "Production and Processing",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-005",
+    "onet_element_id": "2.C.3.a",
+    "name": "Computers and Electronics",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-006",
+    "onet_element_id": "2.C.4.a",
+    "name": "Mathematics",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-007",
+    "onet_element_id": "2.C.4.b",
+    "name": "Physics",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-008",
+    "onet_element_id": "2.C.4.c",
+    "name": "Chemistry",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-009",
+    "onet_element_id": "2.C.4.d",
+    "name": "Biology",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-010",
+    "onet_element_id": "2.C.4.e",
+    "name": "Psychology",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-011",
+    "onet_element_id": "2.C.4.f",
+    "name": "Sociology and Anthropology",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-012",
+    "onet_element_id": "2.C.5.a",
+    "name": "Medicine and Dentistry",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-013",
+    "onet_element_id": "2.C.5.b",
+    "name": "Therapy and Counseling",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-014",
+    "onet_element_id": "2.C.6",
+    "name": "Education and Training",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-015",
+    "onet_element_id": "2.C.7.a",
+    "name": "English Language",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-016",
+    "onet_element_id": "2.C.8.a",
+    "name": "Public Safety and Security",
+    "category": "Clinical"
+  },
+  {
+    "knowledge_id": "KNW-017",
+    "onet_element_id": "2.C.8.b",
+    "name": "Law and Government",
+    "category": "Clinical"
+  }
+]

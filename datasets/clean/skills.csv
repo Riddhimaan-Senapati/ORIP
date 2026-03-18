@@ -1,0 +1,28 @@
+skill_id,onet_element_id,name,category
+SKILL-001,2.A.1.a,Reading Comprehension,Clinical
+SKILL-002,2.A.1.b,Active Listening,Clinical
+SKILL-003,2.A.1.c,Writing,Clinical
+SKILL-004,2.A.1.d,Speaking,Clinical
+SKILL-005,2.A.1.e,Mathematics,Clinical
+SKILL-006,2.A.1.f,Science,Clinical
+SKILL-007,2.A.2.a,Critical Thinking,Clinical
+SKILL-008,2.A.2.b,Active Learning,Clinical
+SKILL-009,2.A.2.c,Learning Strategies,Clinical
+SKILL-010,2.A.2.d,Monitoring,Clinical
+SKILL-011,2.B.1.a,Social Perceptiveness,Clinical
+SKILL-012,2.B.1.b,Coordination,Clinical
+SKILL-013,2.B.1.c,Persuasion,Clinical
+SKILL-014,2.B.1.d,Negotiation,Clinical
+SKILL-015,2.B.1.e,Instructing,Clinical
+SKILL-016,2.B.1.f,Service Orientation,Clinical
+SKILL-017,2.B.2.i,Complex Problem Solving,Regulatory
+SKILL-018,2.B.3.g,Operations Monitoring,Technical
+SKILL-019,2.B.3.h,Operation and Control,Technical
+SKILL-020,2.B.3.j,Equipment Maintenance,Technical
+SKILL-021,2.B.3.m,Quality Control Analysis,Technical
+SKILL-022,2.B.4.e,Judgment and Decision Making,Technical
+SKILL-023,2.B.4.g,Systems Analysis,Technical
+SKILL-024,2.B.4.h,Systems Evaluation,Technical
+SKILL-025,2.B.5.a,Time Management,Clinical
+SKILL-026,2.B.5.c,Management of Material Resources,Clinical
+SKILL-027,2.B.5.d,Management of Personnel Resources,Clinical

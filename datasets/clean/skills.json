@@ -1,0 +1,164 @@
+[
+  {
+    "skill_id": "SKILL-001",
+    "onet_element_id": "2.A.1.a",
+    "name": "Reading Comprehension",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-002",
+    "onet_element_id": "2.A.1.b",
+    "name": "Active Listening",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-003",
+    "onet_element_id": "2.A.1.c",
+    "name": "Writing",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-004",
+    "onet_element_id": "2.A.1.d",
+    "name": "Speaking",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-005",
+    "onet_element_id": "2.A.1.e",
+    "name": "Mathematics",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-006",
+    "onet_element_id": "2.A.1.f",
+    "name": "Science",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-007",
+    "onet_element_id": "2.A.2.a",
+    "name": "Critical Thinking",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-008",
+    "onet_element_id": "2.A.2.b",
+    "name": "Active Learning",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-009",
+    "onet_element_id": "2.A.2.c",
+    "name": "Learning Strategies",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-010",
+    "onet_element_id": "2.A.2.d",
+    "name": "Monitoring",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-011",
+    "onet_element_id": "2.B.1.a",
+    "name": "Social Perceptiveness",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-012",
+    "onet_element_id": "2.B.1.b",
+    "name": "Coordination",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-013",
+    "onet_element_id": "2.B.1.c",
+    "name": "Persuasion",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-014",
+    "onet_element_id": "2.B.1.d",
+    "name": "Negotiation",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-015",
+    "onet_element_id": "2.B.1.e",
+    "name": "Instructing",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-016",
+    "onet_element_id": "2.B.1.f",
+    "name": "Service Orientation",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-017",
+    "onet_element_id": "2.B.2.i",
+    "name": "Complex Problem Solving",
+    "category": "Regulatory"
+  },
+  {
+    "skill_id": "SKILL-018",
+    "onet_element_id": "2.B.3.g",
+    "name": "Operations Monitoring",
+    "category": "Technical"
+  },
+  {
+    "skill_id": "SKILL-019",
+    "onet_element_id": "2.B.3.h",
+    "name": "Operation and Control",
+    "category": "Technical"
+  },
+  {
+    "skill_id": "SKILL-020",
+    "onet_element_id": "2.B.3.j",
+    "name": "Equipment Maintenance",
+    "category": "Technical"
+  },
+  {
+    "skill_id": "SKILL-021",
+    "onet_element_id": "2.B.3.m",
+    "name": "Quality Control Analysis",
+    "category": "Technical"
+  },
+  {
+    "skill_id": "SKILL-022",
+    "onet_element_id": "2.B.4.e",
+    "name": "Judgment and Decision Making",
+    "category": "Technical"
+  },
+  {
+    "skill_id": "SKILL-023",
+    "onet_element_id": "2.B.4.g",
+    "name": "Systems Analysis",
+    "category": "Technical"
+  },
+  {
+    "skill_id": "SKILL-024",
+    "onet_element_id": "2.B.4.h",
+    "name": "Systems Evaluation",
+    "category": "Technical"
+  },
+  {
+    "skill_id": "SKILL-025",
+    "onet_element_id": "2.B.5.a",
+    "name": "Time Management",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-026",
+    "onet_element_id": "2.B.5.c",
+    "name": "Management of Material Resources",
+    "category": "Clinical"
+  },
+  {
+    "skill_id": "SKILL-027",
+    "onet_element_id": "2.B.5.d",
+    "name": "Management of Personnel Resources",
+    "category": "Clinical"
+  }
+]

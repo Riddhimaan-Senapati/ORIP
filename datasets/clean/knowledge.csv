@@ -1,0 +1,18 @@
+knowledge_id,onet_element_id,name,category
+KNW-001,2.C.1.a,Administration and Management,Clinical
+KNW-002,2.C.1.b,Administrative,Clinical
+KNW-003,2.C.1.e,Customer and Personal Service,Clinical
+KNW-004,2.C.2.a,Production and Processing,Clinical
+KNW-005,2.C.3.a,Computers and Electronics,Clinical
+KNW-006,2.C.4.a,Mathematics,Clinical
+KNW-007,2.C.4.b,Physics,Clinical
+KNW-008,2.C.4.c,Chemistry,Clinical
+KNW-009,2.C.4.d,Biology,Clinical
+KNW-010,2.C.4.e,Psychology,Clinical
+KNW-011,2.C.4.f,Sociology and Anthropology,Clinical
+KNW-012,2.C.5.a,Medicine and Dentistry,Clinical
+KNW-013,2.C.5.b,Therapy and Counseling,Clinical
+KNW-014,2.C.6,Education and Training,Clinical
+KNW-015,2.C.7.a,English Language,Clinical
+KNW-016,2.C.8.a,Public Safety and Security,Clinical
+KNW-017,2.C.8.b,Law and Government,Clinical

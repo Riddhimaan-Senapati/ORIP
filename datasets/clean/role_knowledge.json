@@ -1,0 +1,437 @@
+[
+  {
+    "role_id": "ROLE-PA",
+    "knowledge_id": "KNW-003",
+    "importance": 4.16
+  },
+  {
+    "role_id": "ROLE-PA",
+    "knowledge_id": "KNW-005",
+    "importance": 3.54
+  },
+  {
+    "role_id": "ROLE-PA",
+    "knowledge_id": "KNW-006",
+    "importance": 3.41
+  },
+  {
+    "role_id": "ROLE-PA",
+    "knowledge_id": "KNW-008",
+    "importance": 3.47
+  },
+  {
+    "role_id": "ROLE-PA",
+    "knowledge_id": "KNW-009",
+    "importance": 4.81
+  },
+  {
+    "role_id": "ROLE-PA",
+    "knowledge_id": "KNW-010",
+    "importance": 4.57
+  },
+  {
+    "role_id": "ROLE-PA",
+    "knowledge_id": "KNW-011",
+    "importance": 3.61
+  },
+  {
+    "role_id": "ROLE-PA",
+    "knowledge_id": "KNW-012",
+    "importance": 5.0
+  },
+  {
+    "role_id": "ROLE-PA",
+    "knowledge_id": "KNW-013",
+    "importance": 4.5
+  },
+  {
+    "role_id": "ROLE-PA",
+    "knowledge_id": "KNW-014",
+    "importance": 3.97
+  },
+  {
+    "role_id": "ROLE-PA",
+    "knowledge_id": "KNW-015",
+    "importance": 4.62
+  },
+  {
+    "role_id": "ROLE-PA",
+    "knowledge_id": "KNW-016",
+    "importance": 3.19
+  },
+  {
+    "role_id": "ROLE-RT",
+    "knowledge_id": "KNW-003",
+    "importance": 4.33
+  },
+  {
+    "role_id": "ROLE-RT",
+    "knowledge_id": "KNW-005",
+    "importance": 3.23
+  },
+  {
+    "role_id": "ROLE-RT",
+    "knowledge_id": "KNW-006",
+    "importance": 3.07
+  },
+  {
+    "role_id": "ROLE-RT",
+    "knowledge_id": "KNW-008",
+    "importance": 3.1
+  },
+  {
+    "role_id": "ROLE-RT",
+    "knowledge_id": "KNW-009",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-RT",
+    "knowledge_id": "KNW-010",
+    "importance": 3.42
+  },
+  {
+    "role_id": "ROLE-RT",
+    "knowledge_id": "KNW-012",
+    "importance": 4.29
+  },
+  {
+    "role_id": "ROLE-RT",
+    "knowledge_id": "KNW-014",
+    "importance": 3.71
+  },
+  {
+    "role_id": "ROLE-RT",
+    "knowledge_id": "KNW-015",
+    "importance": 3.9
+  },
+  {
+    "role_id": "ROLE-RN",
+    "knowledge_id": "KNW-001",
+    "importance": 3.29
+  },
+  {
+    "role_id": "ROLE-RN",
+    "knowledge_id": "KNW-002",
+    "importance": 3.55
+  },
+  {
+    "role_id": "ROLE-RN",
+    "knowledge_id": "KNW-003",
+    "importance": 4.4
+  },
+  {
+    "role_id": "ROLE-RN",
+    "knowledge_id": "KNW-006",
+    "importance": 3.43
+  },
+  {
+    "role_id": "ROLE-RN",
+    "knowledge_id": "KNW-009",
+    "importance": 3.02
+  },
+  {
+    "role_id": "ROLE-RN",
+    "knowledge_id": "KNW-010",
+    "importance": 4.58
+  },
+  {
+    "role_id": "ROLE-RN",
+    "knowledge_id": "KNW-012",
+    "importance": 4.36
+  },
+  {
+    "role_id": "ROLE-RN",
+    "knowledge_id": "KNW-013",
+    "importance": 3.43
+  },
+  {
+    "role_id": "ROLE-RN",
+    "knowledge_id": "KNW-014",
+    "importance": 3.2
+  },
+  {
+    "role_id": "ROLE-RN",
+    "knowledge_id": "KNW-015",
+    "importance": 4.18
+  },
+  {
+    "role_id": "ROLE-RN",
+    "knowledge_id": "KNW-016",
+    "importance": 3.11
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "knowledge_id": "KNW-001",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "knowledge_id": "KNW-003",
+    "importance": 3.57
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "knowledge_id": "KNW-006",
+    "importance": 3.15
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "knowledge_id": "KNW-007",
+    "importance": 3.23
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "knowledge_id": "KNW-008",
+    "importance": 3.62
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "knowledge_id": "KNW-009",
+    "importance": 4.27
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "knowledge_id": "KNW-010",
+    "importance": 3.43
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "knowledge_id": "KNW-012",
+    "importance": 4.88
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "knowledge_id": "KNW-014",
+    "importance": 3.15
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "knowledge_id": "KNW-015",
+    "importance": 3.68
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "knowledge_id": "KNW-002",
+    "importance": 3.34
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "knowledge_id": "KNW-003",
+    "importance": 3.49
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "knowledge_id": "KNW-006",
+    "importance": 3.5
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "knowledge_id": "KNW-008",
+    "importance": 3.73
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "knowledge_id": "KNW-009",
+    "importance": 3.73
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "knowledge_id": "KNW-012",
+    "importance": 3.27
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "knowledge_id": "KNW-015",
+    "importance": 3.59
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "knowledge_id": "KNW-016",
+    "importance": 3.44
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "knowledge_id": "KNW-002",
+    "importance": 3.5
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "knowledge_id": "KNW-003",
+    "importance": 4.17
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "knowledge_id": "KNW-005",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "knowledge_id": "KNW-007",
+    "importance": 3.18
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "knowledge_id": "KNW-009",
+    "importance": 3.1
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "knowledge_id": "KNW-010",
+    "importance": 3.3
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "knowledge_id": "KNW-012",
+    "importance": 4.27
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "knowledge_id": "KNW-014",
+    "importance": 3.4
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "knowledge_id": "KNW-015",
+    "importance": 4.14
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "knowledge_id": "KNW-016",
+    "importance": 3.31
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "knowledge_id": "KNW-002",
+    "importance": 3.31
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "knowledge_id": "KNW-003",
+    "importance": 4.59
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "knowledge_id": "KNW-004",
+    "importance": 3.24
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "knowledge_id": "KNW-005",
+    "importance": 3.71
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "knowledge_id": "KNW-006",
+    "importance": 3.82
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "knowledge_id": "KNW-012",
+    "importance": 3.85
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "knowledge_id": "KNW-015",
+    "importance": 3.75
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "knowledge_id": "KNW-017",
+    "importance": 3.49
+  },
+  {
+    "role_id": "ROLE-ST",
+    "knowledge_id": "KNW-003",
+    "importance": 3.73
+  },
+  {
+    "role_id": "ROLE-ST",
+    "knowledge_id": "KNW-012",
+    "importance": 3.71
+  },
+  {
+    "role_id": "ROLE-ST",
+    "knowledge_id": "KNW-014",
+    "importance": 3.1
+  },
+  {
+    "role_id": "ROLE-ST",
+    "knowledge_id": "KNW-015",
+    "importance": 3.45
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "knowledge_id": "KNW-001",
+    "importance": 3.3
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "knowledge_id": "KNW-003",
+    "importance": 3.99
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "knowledge_id": "KNW-006",
+    "importance": 3.03
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "knowledge_id": "KNW-010",
+    "importance": 3.71
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "knowledge_id": "KNW-012",
+    "importance": 3.69
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "knowledge_id": "KNW-013",
+    "importance": 3.11
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "knowledge_id": "KNW-014",
+    "importance": 3.19
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "knowledge_id": "KNW-015",
+    "importance": 3.9
+  },
+  {
+    "role_id": "ROLE-NA",
+    "knowledge_id": "KNW-001",
+    "importance": 3.34
+  },
+  {
+    "role_id": "ROLE-NA",
+    "knowledge_id": "KNW-003",
+    "importance": 3.92
+  },
+  {
+    "role_id": "ROLE-NA",
+    "knowledge_id": "KNW-012",
+    "importance": 3.15
+  },
+  {
+    "role_id": "ROLE-NA",
+    "knowledge_id": "KNW-013",
+    "importance": 3.02
+  },
+  {
+    "role_id": "ROLE-NA",
+    "knowledge_id": "KNW-014",
+    "importance": 3.1
+  },
+  {
+    "role_id": "ROLE-NA",
+    "knowledge_id": "KNW-015",
+    "importance": 3.27
+  },
+  {
+    "role_id": "ROLE-NA",
+    "knowledge_id": "KNW-016",
+    "importance": 3.16
+  }
+]

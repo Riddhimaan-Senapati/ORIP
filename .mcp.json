@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "palantir-mcp": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "C:\\Program Files\\nodejs\\npx.cmd",
+        "-y",
+        "palantir-mcp",
+        "--foundry-api-url",
+        "https://your-stack.palantirfoundry.com/"
+      ],
+      "env": {
+        "FOUNDRY_TOKEN": "REDACTED_FOUNDRY_TOKEN",
+        "NPM_CONFIG_REGISTRY": "https://your-stack.palantirfoundry.com/artifacts/api/repositories/ri.artifacts.repository.discovered.foundry-mcp/contents/release/npm/",
+        "NPM_CONFIG_//your-stack.palantirfoundry.com/artifacts/api/repositories/ri.artifacts.repository.discovered.foundry-mcp/contents/release/npm/:_authToken": "your-token-here"
+      }
+    }
+  }
+}

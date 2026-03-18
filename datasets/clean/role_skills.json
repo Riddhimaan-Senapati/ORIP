@@ -1,0 +1,837 @@
+[
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-001",
+    "importance": 4.12
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-002",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-003",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-004",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-005",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-006",
+    "importance": 3.62
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-007",
+    "importance": 4.12
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-008",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-009",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-010",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-011",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-012",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-013",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-014",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-015",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-016",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-017",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-022",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-023",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-024",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-025",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-PA",
+    "skill_id": "SKILL-027",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-001",
+    "importance": 3.62
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-002",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-003",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-004",
+    "importance": 3.75
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-006",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-007",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-008",
+    "importance": 3.62
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-009",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-010",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-011",
+    "importance": 3.62
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-012",
+    "importance": 3.38
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-015",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-016",
+    "importance": 3.62
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-017",
+    "importance": 3.38
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-018",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-021",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-022",
+    "importance": 3.38
+  },
+  {
+    "role_id": "ROLE-RT",
+    "skill_id": "SKILL-025",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-001",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-002",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-003",
+    "importance": 3.75
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-004",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-007",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-008",
+    "importance": 3.5
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-009",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-010",
+    "importance": 3.75
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-011",
+    "importance": 4.12
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-012",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-015",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-016",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-017",
+    "importance": 3.5
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-018",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-022",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-023",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-024",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-RN",
+    "skill_id": "SKILL-025",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-001",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-002",
+    "importance": 4.12
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-003",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-004",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-005",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-006",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-007",
+    "importance": 4.5
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-008",
+    "importance": 3.62
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-009",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-010",
+    "importance": 4.12
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-011",
+    "importance": 3.75
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-012",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-013",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-015",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-016",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-017",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-018",
+    "importance": 3.62
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-022",
+    "importance": 4.12
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-023",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-024",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-025",
+    "importance": 3.75
+  },
+  {
+    "role_id": "ROLE-MD-EM",
+    "skill_id": "SKILL-027",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-001",
+    "importance": 3.5
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-002",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-003",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-004",
+    "importance": 3.38
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-006",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-007",
+    "importance": 3.38
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-008",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-010",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-011",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-012",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-015",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-016",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-017",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-018",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-021",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-022",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-MLT",
+    "skill_id": "SKILL-025",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-001",
+    "importance": 3.5
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-002",
+    "importance": 3.75
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-003",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-004",
+    "importance": 3.5
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-007",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-010",
+    "importance": 3.38
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-011",
+    "importance": 3.62
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-012",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-016",
+    "importance": 3.5
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-018",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-019",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-021",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-022",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-RAD",
+    "skill_id": "SKILL-025",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-001",
+    "importance": 3.75
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-002",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-003",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-004",
+    "importance": 3.75
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-005",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-007",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-008",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-010",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-011",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-012",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-016",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-017",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-022",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-PHARM",
+    "skill_id": "SKILL-025",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-001",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-002",
+    "importance": 3.38
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-004",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-007",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-008",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-009",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-010",
+    "importance": 3.75
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-011",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-012",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-015",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-016",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-017",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-018",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-019",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-020",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-022",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-025",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-ST",
+    "skill_id": "SKILL-026",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-001",
+    "importance": 3.75
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-002",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-003",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-004",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-007",
+    "importance": 3.75
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-008",
+    "importance": 3.38
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-009",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-010",
+    "importance": 3.88
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-011",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-012",
+    "importance": 4.0
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-015",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-016",
+    "importance": 4.12
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-017",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-022",
+    "importance": 3.62
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-023",
+    "importance": 3.0
+  },
+  {
+    "role_id": "ROLE-LPN",
+    "skill_id": "SKILL-025",
+    "importance": 3.62
+  },
+  {
+    "role_id": "ROLE-NA",
+    "skill_id": "SKILL-001",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-NA",
+    "skill_id": "SKILL-002",
+    "importance": 3.62
+  },
+  {
+    "role_id": "ROLE-NA",
+    "skill_id": "SKILL-004",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-NA",
+    "skill_id": "SKILL-007",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-NA",
+    "skill_id": "SKILL-010",
+    "importance": 3.25
+  },
+  {
+    "role_id": "ROLE-NA",
+    "skill_id": "SKILL-011",
+    "importance": 3.62
+  },
+  {
+    "role_id": "ROLE-NA",
+    "skill_id": "SKILL-012",
+    "importance": 3.12
+  },
+  {
+    "role_id": "ROLE-NA",
+    "skill_id": "SKILL-016",
+    "importance": 4.0
+  }
+]
