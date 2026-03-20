@@ -43,6 +43,9 @@ COLUMN_MAP = {
     # Certification / compliance
     "CRTFCTN_DT": "certification_date",
     "TRMNTN_EXPRTN_DT": "termination_date",
+    # Accreditation -- new API returns a single ACRDTN_TYPE_CD column
+    "ACRDTN_TYPE_CD": "accreditation_code_1",
+    # Legacy column names kept for CSV fallback compatibility
     "ACRDTN_TYPE_1_CD": "accreditation_code_1",
     "ACRDTN_TYPE_2_CD": "accreditation_code_2",
 }

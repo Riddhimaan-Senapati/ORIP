@@ -2,14 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ScoreRing from "@/components/ScoreRing";
 import StatusBadge from "@/components/StatusBadge";
-import {
-  getEmployeeById,
-  getFacilityById,
-  getRoleById,
-  getCertsByEmployee,
-  getCertById,
-  certifications,
-} from "@/lib/data";
+import { getEmployeePageData } from "@/lib/osdk-queries";
+import { RenewCertButton, FlagEmployeeButton, AddCertButton } from "@/components/EmployeeWriteActions";
 
 export default async function EmployeePage({
   params,
@@ -17,14 +11,12 @@ export default async function EmployeePage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const employee = getEmployeeById(id);
-  if (!employee) notFound();
+  const data = await getEmployeePageData(id);
+  if (!data) notFound();
 
-  const facility = getFacilityById(employee.facilityId);
-  const role = getRoleById(employee.roleId);
-  const empCerts = getCertsByEmployee(employee.id);
+  const { employee, facility, empCerts, certMap, allCertifications, role } = data;
 
-  const today = new Date("2026-03-18");
+  const today = new Date();
 
   const expiredCount = empCerts.filter((c) => c.status === "Expired").length;
   const expiringCount = empCerts.filter((c) => c.status === "Expiring Soon").length;
@@ -33,7 +25,7 @@ export default async function EmployeePage({
   const score = employee.readinessScore;
   const scoreColor = score >= 90 ? "var(--emerald)" : score >= 80 ? "var(--amber)" : "var(--rose)";
 
-  // Required certs for this role
+  // Required certs for this role (from static role definitions)
   const requiredCertIds = role?.requiredCertIds ?? [];
   const heldCertIds = empCerts.map((ec) => ec.certId);
   const missingCerts = requiredCertIds.filter((cid) => !heldCertIds.includes(cid));
@@ -78,7 +70,7 @@ export default async function EmployeePage({
             </div>
 
             {/* Meta tags */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "16px" }}>
               {[
                 { label: "Facility", value: facility?.name.split(" ").slice(0, 2).join(" ") ?? "—" },
                 { label: "Dept", value: employee.department },
@@ -101,6 +93,9 @@ export default async function EmployeePage({
                 </div>
               ))}
             </div>
+
+            {/* Write actions */}
+            <FlagEmployeeButton employeeId={employee.id} isFlagged={employee.flaggedForReview ?? false} />
           </div>
 
           {/* Score ring */}
@@ -146,8 +141,11 @@ export default async function EmployeePage({
 
       {/* Certifications table */}
       <div className="animate-fade-up-3" style={{ marginBottom: "32px" }}>
-        <div style={{ fontFamily: "var(--font-mono)", fontSize: "10px", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--text-dim)", marginBottom: "12px" }}>
-          Certifications ({empCerts.length})
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
+          <div style={{ fontFamily: "var(--font-mono)", fontSize: "10px", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--text-dim)" }}>
+            Certifications ({empCerts.length})
+          </div>
+          <AddCertButton employeeId={employee.id} allCertifications={allCertifications} />
         </div>
         <div className="card" style={{ overflow: "hidden" }}>
           <table>
@@ -159,6 +157,7 @@ export default async function EmployeePage({
                 <th>Expiry Date</th>
                 <th>Days Left</th>
                 <th>Status</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -168,7 +167,7 @@ export default async function EmployeePage({
                   return order[a.status] - order[b.status];
                 })
                 .map((ec) => {
-                  const cert = getCertById(ec.certId);
+                  const cert = certMap.get(ec.certId);
                   const expDate = new Date(ec.expiryDate);
                   const daysLeft = Math.ceil((expDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
                   const daysColor =
@@ -213,6 +212,9 @@ export default async function EmployeePage({
                       <td>
                         <StatusBadge status={ec.status} />
                       </td>
+                      <td>
+                        <RenewCertButton recordId={ec.recordId} certName={cert?.name ?? ec.certId} />
+                      </td>
                     </tr>
                   );
                 })}
@@ -233,7 +235,7 @@ export default async function EmployeePage({
           <div className="card card-critical" style={{ padding: "16px 20px" }}>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
               {missingCerts.map((cid) => {
-                const cert = certifications.find((c) => c.id === cid);
+                const cert = allCertifications.find((c) => c.id === cid);
                 return (
                   <div
                     key={cid}

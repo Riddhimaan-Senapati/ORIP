@@ -1,0 +1,107 @@
+[
+  {
+    "cert_id": "CERT-BLS",
+    "name": "Basic Life Support (BLS)",
+    "issuing_body": "American Heart Association",
+    "validity_months": 24,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-ACLS",
+    "name": "Advanced Cardiovascular Life Support (ACLS)",
+    "issuing_body": "American Heart Association",
+    "validity_months": 24,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-PALS",
+    "name": "Pediatric Advanced Life Support (PALS)",
+    "issuing_body": "American Heart Association",
+    "validity_months": 24,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-NRP",
+    "name": "Neonatal Resuscitation Program (NRP)",
+    "issuing_body": "AAP",
+    "validity_months": 24,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-RN-LIC",
+    "name": "State RN License",
+    "issuing_body": "MA Board of Nursing",
+    "validity_months": 24,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-LPN-LIC",
+    "name": "State LPN License",
+    "issuing_body": "MA Board of Nursing",
+    "validity_months": 24,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-DEA",
+    "name": "DEA Registration",
+    "issuing_body": "Drug Enforcement Agency",
+    "validity_months": 36,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-HIPAA",
+    "name": "HIPAA Compliance Training",
+    "issuing_body": "Internal",
+    "validity_months": 12,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-IC",
+    "name": "Infection Control Certification",
+    "issuing_body": "APIC",
+    "validity_months": 12,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-BBP",
+    "name": "Blood-Borne Pathogen Training",
+    "issuing_body": "OSHA",
+    "validity_months": 12,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-RT-LIC",
+    "name": "Respiratory Therapy License",
+    "issuing_body": "MA DPH",
+    "validity_months": 24,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-ARRT",
+    "name": "Radiology Certification (ARRT)",
+    "issuing_body": "ARRT",
+    "validity_months": 24,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-PTCB",
+    "name": "Pharmacy Technician Certification (PTCB)",
+    "issuing_body": "PTCB",
+    "validity_months": 24,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-NBSTSA",
+    "name": "Surgical Tech Certification (NBSTSA)",
+    "issuing_body": "NBSTSA",
+    "validity_months": 24,
+    "is_mandatory": true
+  },
+  {
+    "cert_id": "CERT-CNA",
+    "name": "CNA Certification",
+    "issuing_body": "MA DPH",
+    "validity_months": 24,
+    "is_mandatory": true
+  }
+]

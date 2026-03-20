@@ -2,16 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ScoreRing from "@/components/ScoreRing";
 import StatusBadge from "@/components/StatusBadge";
-import {
-  getFacilityById,
-  getDepartmentsByFacility,
-  getEmployeesByFacility,
-  getCertsByEmployee,
-  getRoleById,
-  getCertById,
-  employees,
-  employeeCertifications,
-} from "@/lib/data";
+import { getFacilityPageData } from "@/lib/osdk-queries";
 
 export default async function FacilityPage({
   params,
@@ -19,21 +10,18 @@ export default async function FacilityPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const facility = getFacilityById(id);
-  if (!facility) notFound();
+  const data = await getFacilityPageData(id);
+  if (!data) notFound();
 
-  const depts = getDepartmentsByFacility(id);
-  const facilityEmployees = getEmployeesByFacility(id);
+  const { facility, departments: depts, facilityEmployees, facilityCerts, certMap, roleMap } = data;
 
   // Upcoming expirations (within 90 days from today)
-  const today = new Date("2026-03-18");
+  const today = new Date();
   const in90 = new Date(today);
   in90.setDate(in90.getDate() + 90);
 
-  const upcomingExp = employeeCertifications
+  const upcomingExp = facilityCerts
     .filter((ec) => {
-      const emp = facilityEmployees.find((e) => e.id === ec.employeeId);
-      if (!emp) return false;
       const exp = new Date(ec.expiryDate);
       return exp >= today && exp <= in90;
     })
@@ -47,11 +35,8 @@ export default async function FacilityPage({
   const isRed = facility.readinessScore < 80;
   const isYellow = facility.readinessScore >= 80 && facility.readinessScore < 90;
 
-  const allCerts = employeeCertifications.filter((ec) =>
-    facilityEmployees.some((e) => e.id === ec.employeeId)
-  );
-  const expiredCount = allCerts.filter((c) => c.status === "Expired").length;
-  const expiringCount = allCerts.filter((c) => c.status === "Expiring Soon").length;
+  const expiredCount = facilityCerts.filter((c) => c.status === "Expired").length;
+  const expiringCount = facilityCerts.filter((c) => c.status === "Expiring Soon").length;
 
   return (
     <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "32px 24px 64px" }}>
@@ -218,7 +203,7 @@ export default async function FacilityPage({
                 <tbody>
                   {upcomingExp.map((ec) => {
                     const emp = facilityEmployees.find((e) => e.id === ec.employeeId);
-                    const cert = getCertById(ec.certId);
+                    const cert = certMap.get(ec.certId);
                     const daysLeft = Math.ceil(
                       (new Date(ec.expiryDate).getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
                     );
@@ -269,8 +254,8 @@ export default async function FacilityPage({
               </thead>
               <tbody>
                 {criticalEmployees.map((emp) => {
-                  const role = getRoleById(emp.roleId);
-                  const empCerts = getCertsByEmployee(emp.id);
+                  const role = roleMap?.get(emp.roleId);
+                  const empCerts = facilityCerts.filter((c) => c.employeeId === emp.id);
                   const expired = empCerts.filter((c) => c.status === "Expired").length;
                   return (
                     <tr key={emp.id}>
@@ -328,7 +313,7 @@ export default async function FacilityPage({
               {facilityEmployees
                 .sort((a, b) => a.readinessScore - b.readinessScore)
                 .map((emp) => {
-                  const role = getRoleById(emp.roleId);
+                  const role = roleMap?.get(emp.roleId);
                   const sc = emp.readinessScore;
                   const scoreColor = sc >= 90 ? "var(--emerald)" : sc >= 80 ? "var(--amber)" : "var(--rose)";
                   return (

@@ -49,8 +49,9 @@ def main():
     if not args.skip_download:
         steps.append(("download", "Download raw datasets"))
     steps += [
-        ("clean_cms", "Clean CMS POS -> facilities"),
-        ("clean_onet", "Clean O*NET -> roles, skills, knowledge, role_certs"),
+        ("clean_cms",          "Clean CMS POS -> facilities"),
+        ("clean_onet",         "Clean O*NET -> roles, skills, knowledge, role_certs"),
+        ("export_synthetic",   "Export synthetic employees / certifications"),
     ]
 
     failed = []

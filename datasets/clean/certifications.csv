@@ -1,0 +1,16 @@
+cert_id,name,issuing_body,validity_months,is_mandatory
+CERT-BLS,Basic Life Support (BLS),American Heart Association,24,True
+CERT-ACLS,Advanced Cardiovascular Life Support (ACLS),American Heart Association,24,True
+CERT-PALS,Pediatric Advanced Life Support (PALS),American Heart Association,24,True
+CERT-NRP,Neonatal Resuscitation Program (NRP),AAP,24,True
+CERT-RN-LIC,State RN License,MA Board of Nursing,24,True
+CERT-LPN-LIC,State LPN License,MA Board of Nursing,24,True
+CERT-DEA,DEA Registration,Drug Enforcement Agency,36,True
+CERT-HIPAA,HIPAA Compliance Training,Internal,12,True
+CERT-IC,Infection Control Certification,APIC,12,True
+CERT-BBP,Blood-Borne Pathogen Training,OSHA,12,True
+CERT-RT-LIC,Respiratory Therapy License,MA DPH,24,True
+CERT-ARRT,Radiology Certification (ARRT),ARRT,24,True
+CERT-PTCB,Pharmacy Technician Certification (PTCB),PTCB,24,True
+CERT-NBSTSA,Surgical Tech Certification (NBSTSA),NBSTSA,24,True
+CERT-CNA,CNA Certification,MA DPH,24,True

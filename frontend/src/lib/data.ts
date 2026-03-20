@@ -42,6 +42,9 @@ export type Employee = {
   hireDate: string;
   employmentStatus: string;
   readinessScore: number;
+  /** Written by flag-employee-for-review action; not in v0.1.0 SDK backing dataset */
+  flaggedForReview?: boolean;
+  reviewNotes?: string;
 };
 
 export type EmployeeCertification = {
@@ -57,51 +60,38 @@ export type EmployeeCertification = {
 
 export const facilities: Facility[] = [
   {
-    id: "FAC-001",
-    name: "Metro General Hospital",
-    address: "123 Main St, Boston, MA",
-    type: "Acute Care",
-    bedCount: 350,
+    id: "FAC-0001",
+    name: "Health Alliance - Clinton Hospital",
+    address: "201 Highland St, Clinton, MA",
+    type: "Short-Term Acute Care",
+    bedCount: 150,
     accreditationStatus: "Active",
-    readinessScore: 92,
+    readinessScore: 0,
   },
   {
-    id: "FAC-002",
-    name: "Riverside Community Medical Center",
-    address: "450 River Rd, Cambridge, MA",
-    type: "General",
-    bedCount: 180,
+    id: "FAC-0002",
+    name: "Mount Auburn Hospital",
+    address: "330 Mount Auburn St, Cambridge, MA",
+    type: "Short-Term Acute Care",
+    bedCount: 217,
     accreditationStatus: "Active",
-    readinessScore: 71,
+    readinessScore: 0,
   },
   {
-    id: "FAC-003",
-    name: "Harbor View Specialty Clinic",
-    address: "88 Harbor Blvd, Quincy, MA",
-    type: "Specialty",
-    bedCount: 60,
+    id: "FAC-0003",
+    name: "Sturdy Memorial Hospital",
+    address: "211 Park St, Attleboro, MA",
+    type: "Short-Term Acute Care",
+    bedCount: 126,
     accreditationStatus: "Active",
-    readinessScore: 85,
+    readinessScore: 0,
   },
 ];
 
 // ─── DEPARTMENTS ──────────────────────────────────────────────────────────────
 
-export const departments: Department[] = [
-  { name: "ICU", facilityId: "FAC-001", readinessScore: 94, employeeCount: 8, expiredCount: 0, expiringCount: 2 },
-  { name: "Emergency", facilityId: "FAC-001", readinessScore: 91, employeeCount: 7, expiredCount: 1, expiringCount: 1 },
-  { name: "Surgery", facilityId: "FAC-001", readinessScore: 95, employeeCount: 5, expiredCount: 0, expiringCount: 1 },
-  { name: "Radiology", facilityId: "FAC-001", readinessScore: 88, employeeCount: 3, expiredCount: 0, expiringCount: 2 },
-
-  { name: "ICU", facilityId: "FAC-002", readinessScore: 58, employeeCount: 6, expiredCount: 5, expiringCount: 3 },
-  { name: "Emergency", facilityId: "FAC-002", readinessScore: 76, employeeCount: 5, expiredCount: 2, expiringCount: 2 },
-  { name: "General Medicine", facilityId: "FAC-002", readinessScore: 82, employeeCount: 6, expiredCount: 1, expiringCount: 2 },
-  { name: "Pharmacy", facilityId: "FAC-002", readinessScore: 90, employeeCount: 3, expiredCount: 0, expiringCount: 1 },
-
-  { name: "Surgery", facilityId: "FAC-003", readinessScore: 88, employeeCount: 4, expiredCount: 0, expiringCount: 2 },
-  { name: "Radiology", facilityId: "FAC-003", readinessScore: 83, employeeCount: 3, expiredCount: 1, expiringCount: 1 },
-  { name: "General Medicine", facilityId: "FAC-003", readinessScore: 84, employeeCount: 4, expiredCount: 0, expiringCount: 2 },
-];
+// Departments are computed dynamically from OSDK data in osdk-queries.ts
+export const departments: Department[] = [];
 
 // ─── ROLES ────────────────────────────────────────────────────────────────────
 
@@ -142,35 +132,35 @@ export const certifications: Certification[] = [
 
 export const employees: Employee[] = [
   // FAC-001 Metro General
-  { id: "EMP-001", firstName: "Sarah", lastName: "Chen", roleId: "ROLE-RN", facilityId: "FAC-001", department: "ICU", hireDate: "2021-03-15", employmentStatus: "Active", readinessScore: 100 },
-  { id: "EMP-002", firstName: "Marcus", lastName: "Johnson", roleId: "ROLE-RN", facilityId: "FAC-001", department: "ICU", hireDate: "2019-07-22", employmentStatus: "Active", readinessScore: 83 },
-  { id: "EMP-003", firstName: "Priya", lastName: "Patel", roleId: "ROLE-RT", facilityId: "FAC-001", department: "ICU", hireDate: "2022-01-10", employmentStatus: "Active", readinessScore: 100 },
-  { id: "EMP-004", firstName: "James", lastName: "Rivera", roleId: "ROLE-MD-EM", facilityId: "FAC-001", department: "Emergency", hireDate: "2018-11-05", employmentStatus: "Active", readinessScore: 100 },
-  { id: "EMP-005", firstName: "Aisha", lastName: "Williams", roleId: "ROLE-RN", facilityId: "FAC-001", department: "Emergency", hireDate: "2020-04-18", employmentStatus: "Active", readinessScore: 83 },
-  { id: "EMP-006", firstName: "Daniel", lastName: "Kim", roleId: "ROLE-ST", facilityId: "FAC-001", department: "Surgery", hireDate: "2023-02-28", employmentStatus: "Active", readinessScore: 100 },
-  { id: "EMP-007", firstName: "Natalie", lastName: "Torres", roleId: "ROLE-RAD", facilityId: "FAC-001", department: "Radiology", hireDate: "2021-09-14", employmentStatus: "Active", readinessScore: 75 },
-  { id: "EMP-008", firstName: "Leon", lastName: "Brooks", roleId: "ROLE-LPN", facilityId: "FAC-001", department: "ICU", hireDate: "2022-06-30", employmentStatus: "Active", readinessScore: 100 },
-  { id: "EMP-009", firstName: "Hannah", lastName: "Fischer", roleId: "ROLE-PA", facilityId: "FAC-001", department: "Emergency", hireDate: "2019-12-01", employmentStatus: "Active", readinessScore: 100 },
-  { id: "EMP-010", firstName: "Carlos", lastName: "Moreno", roleId: "ROLE-NA", facilityId: "FAC-001", department: "ICU", hireDate: "2024-01-08", employmentStatus: "Active", readinessScore: 100 },
+  { id: "EMP-001", firstName: "Sarah", lastName: "Chen", roleId: "ROLE-RN", facilityId: "FAC-0001", department: "ICU", hireDate: "2021-03-15", employmentStatus: "Active", readinessScore: 100 },
+  { id: "EMP-002", firstName: "Marcus", lastName: "Johnson", roleId: "ROLE-RN", facilityId: "FAC-0001", department: "ICU", hireDate: "2019-07-22", employmentStatus: "Active", readinessScore: 83 },
+  { id: "EMP-003", firstName: "Priya", lastName: "Patel", roleId: "ROLE-RT", facilityId: "FAC-0001", department: "ICU", hireDate: "2022-01-10", employmentStatus: "Active", readinessScore: 100 },
+  { id: "EMP-004", firstName: "James", lastName: "Rivera", roleId: "ROLE-MD-EM", facilityId: "FAC-0001", department: "Emergency", hireDate: "2018-11-05", employmentStatus: "Active", readinessScore: 100 },
+  { id: "EMP-005", firstName: "Aisha", lastName: "Williams", roleId: "ROLE-RN", facilityId: "FAC-0001", department: "Emergency", hireDate: "2020-04-18", employmentStatus: "Active", readinessScore: 83 },
+  { id: "EMP-006", firstName: "Daniel", lastName: "Kim", roleId: "ROLE-ST", facilityId: "FAC-0001", department: "Surgery", hireDate: "2023-02-28", employmentStatus: "Active", readinessScore: 100 },
+  { id: "EMP-007", firstName: "Natalie", lastName: "Torres", roleId: "ROLE-RAD", facilityId: "FAC-0001", department: "Radiology", hireDate: "2021-09-14", employmentStatus: "Active", readinessScore: 75 },
+  { id: "EMP-008", firstName: "Leon", lastName: "Brooks", roleId: "ROLE-LPN", facilityId: "FAC-0001", department: "ICU", hireDate: "2022-06-30", employmentStatus: "Active", readinessScore: 100 },
+  { id: "EMP-009", firstName: "Hannah", lastName: "Fischer", roleId: "ROLE-PA", facilityId: "FAC-0001", department: "Emergency", hireDate: "2019-12-01", employmentStatus: "Active", readinessScore: 100 },
+  { id: "EMP-010", firstName: "Carlos", lastName: "Moreno", roleId: "ROLE-NA", facilityId: "FAC-0001", department: "ICU", hireDate: "2024-01-08", employmentStatus: "Active", readinessScore: 100 },
 
   // FAC-002 Riverside — ICU intentionally clustered with expired certs
-  { id: "EMP-011", firstName: "Diana", lastName: "Nguyen", roleId: "ROLE-RN", facilityId: "FAC-002", department: "ICU", hireDate: "2020-08-15", employmentStatus: "Active", readinessScore: 33 },
-  { id: "EMP-012", firstName: "Tyrone", lastName: "Adams", roleId: "ROLE-RN", facilityId: "FAC-002", department: "ICU", hireDate: "2019-03-20", employmentStatus: "Active", readinessScore: 50 },
-  { id: "EMP-013", firstName: "Mei", lastName: "Lin", roleId: "ROLE-RT", facilityId: "FAC-002", department: "ICU", hireDate: "2021-11-12", employmentStatus: "Active", readinessScore: 40 },
-  { id: "EMP-014", firstName: "Kevin", lastName: "O'Brien", roleId: "ROLE-MD-EM", facilityId: "FAC-002", department: "Emergency", hireDate: "2018-06-01", employmentStatus: "Active", readinessScore: 80 },
-  { id: "EMP-015", firstName: "Fatima", lastName: "Hassan", roleId: "ROLE-RN", facilityId: "FAC-002", department: "Emergency", hireDate: "2022-09-03", employmentStatus: "Active", readinessScore: 83 },
-  { id: "EMP-016", firstName: "Roberto", lastName: "Fernandez", roleId: "ROLE-PA", facilityId: "FAC-002", department: "General Medicine", hireDate: "2020-02-17", employmentStatus: "Active", readinessScore: 80 },
-  { id: "EMP-017", firstName: "Sandra", lastName: "Mitchell", roleId: "ROLE-PHARM", facilityId: "FAC-002", department: "Pharmacy", hireDate: "2023-05-22", employmentStatus: "Active", readinessScore: 100 },
-  { id: "EMP-018", firstName: "Jaylen", lastName: "Carter", roleId: "ROLE-LPN", facilityId: "FAC-002", department: "General Medicine", hireDate: "2021-07-04", employmentStatus: "Active", readinessScore: 80 },
-  { id: "EMP-019", firstName: "Ingrid", lastName: "Sorensen", roleId: "ROLE-NA", facilityId: "FAC-002", department: "General Medicine", hireDate: "2024-03-11", employmentStatus: "Active", readinessScore: 75 },
-  { id: "EMP-020", firstName: "Ahmad", lastName: "Khalil", roleId: "ROLE-RN", facilityId: "FAC-002", department: "ICU", hireDate: "2020-05-29", employmentStatus: "Active", readinessScore: 17 },
+  { id: "EMP-011", firstName: "Diana", lastName: "Nguyen", roleId: "ROLE-RN", facilityId: "FAC-0002", department: "ICU", hireDate: "2020-08-15", employmentStatus: "Active", readinessScore: 33 },
+  { id: "EMP-012", firstName: "Tyrone", lastName: "Adams", roleId: "ROLE-RN", facilityId: "FAC-0002", department: "ICU", hireDate: "2019-03-20", employmentStatus: "Active", readinessScore: 50 },
+  { id: "EMP-013", firstName: "Mei", lastName: "Lin", roleId: "ROLE-RT", facilityId: "FAC-0002", department: "ICU", hireDate: "2021-11-12", employmentStatus: "Active", readinessScore: 40 },
+  { id: "EMP-014", firstName: "Kevin", lastName: "O'Brien", roleId: "ROLE-MD-EM", facilityId: "FAC-0002", department: "Emergency", hireDate: "2018-06-01", employmentStatus: "Active", readinessScore: 80 },
+  { id: "EMP-015", firstName: "Fatima", lastName: "Hassan", roleId: "ROLE-RN", facilityId: "FAC-0002", department: "Emergency", hireDate: "2022-09-03", employmentStatus: "Active", readinessScore: 83 },
+  { id: "EMP-016", firstName: "Roberto", lastName: "Fernandez", roleId: "ROLE-PA", facilityId: "FAC-0002", department: "General Medicine", hireDate: "2020-02-17", employmentStatus: "Active", readinessScore: 80 },
+  { id: "EMP-017", firstName: "Sandra", lastName: "Mitchell", roleId: "ROLE-PHARM", facilityId: "FAC-0002", department: "Pharmacy", hireDate: "2023-05-22", employmentStatus: "Active", readinessScore: 100 },
+  { id: "EMP-018", firstName: "Jaylen", lastName: "Carter", roleId: "ROLE-LPN", facilityId: "FAC-0002", department: "General Medicine", hireDate: "2021-07-04", employmentStatus: "Active", readinessScore: 80 },
+  { id: "EMP-019", firstName: "Ingrid", lastName: "Sorensen", roleId: "ROLE-NA", facilityId: "FAC-0002", department: "General Medicine", hireDate: "2024-03-11", employmentStatus: "Active", readinessScore: 75 },
+  { id: "EMP-020", firstName: "Ahmad", lastName: "Khalil", roleId: "ROLE-RN", facilityId: "FAC-0002", department: "ICU", hireDate: "2020-05-29", employmentStatus: "Active", readinessScore: 17 },
 
   // FAC-003 Harbor View
-  { id: "EMP-021", firstName: "Olivia", lastName: "Grant", roleId: "ROLE-ST", facilityId: "FAC-003", department: "Surgery", hireDate: "2021-04-01", employmentStatus: "Active", readinessScore: 100 },
-  { id: "EMP-022", firstName: "Nathan", lastName: "Park", roleId: "ROLE-RAD", facilityId: "FAC-003", department: "Radiology", hireDate: "2022-10-18", employmentStatus: "Active", readinessScore: 75 },
-  { id: "EMP-023", firstName: "Grace", lastName: "Okonkwo", roleId: "ROLE-NA", facilityId: "FAC-003", department: "General Medicine", hireDate: "2023-08-07", employmentStatus: "Active", readinessScore: 100 },
-  { id: "EMP-024", firstName: "Ethan", lastName: "Walsh", roleId: "ROLE-LPN", facilityId: "FAC-003", department: "General Medicine", hireDate: "2019-01-15", employmentStatus: "Active", readinessScore: 80 },
-  { id: "EMP-025", firstName: "Sofia", lastName: "Reyes", roleId: "ROLE-ST", facilityId: "FAC-003", department: "Surgery", hireDate: "2020-12-03", employmentStatus: "Active", readinessScore: 80 },
+  { id: "EMP-021", firstName: "Olivia", lastName: "Grant", roleId: "ROLE-ST", facilityId: "FAC-0003", department: "Surgery", hireDate: "2021-04-01", employmentStatus: "Active", readinessScore: 100 },
+  { id: "EMP-022", firstName: "Nathan", lastName: "Park", roleId: "ROLE-RAD", facilityId: "FAC-0003", department: "Radiology", hireDate: "2022-10-18", employmentStatus: "Active", readinessScore: 75 },
+  { id: "EMP-023", firstName: "Grace", lastName: "Okonkwo", roleId: "ROLE-NA", facilityId: "FAC-0003", department: "General Medicine", hireDate: "2023-08-07", employmentStatus: "Active", readinessScore: 100 },
+  { id: "EMP-024", firstName: "Ethan", lastName: "Walsh", roleId: "ROLE-LPN", facilityId: "FAC-0003", department: "General Medicine", hireDate: "2019-01-15", employmentStatus: "Active", readinessScore: 80 },
+  { id: "EMP-025", firstName: "Sofia", lastName: "Reyes", roleId: "ROLE-ST", facilityId: "FAC-0003", department: "Surgery", hireDate: "2020-12-03", employmentStatus: "Active", readinessScore: 80 },
 ];
 
 // ─── EMPLOYEE CERTIFICATIONS ──────────────────────────────────────────────────

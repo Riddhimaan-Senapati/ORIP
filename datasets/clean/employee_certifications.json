@@ -1,0 +1,1018 @@
+[
+  {
+    "record_id": "EC-001",
+    "employee_id": "EMP-001",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-06-01",
+    "expiration_date": "2026-06-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-002",
+    "employee_id": "EMP-001",
+    "cert_id": "CERT-ACLS",
+    "issue_date": "2024-06-01",
+    "expiration_date": "2026-06-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-003",
+    "employee_id": "EMP-001",
+    "cert_id": "CERT-RN-LIC",
+    "issue_date": "2024-01-01",
+    "expiration_date": "2026-01-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-004",
+    "employee_id": "EMP-001",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-01-15",
+    "expiration_date": "2026-01-15",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-005",
+    "employee_id": "EMP-001",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-02-01",
+    "expiration_date": "2026-02-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-006",
+    "employee_id": "EMP-001",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-02-01",
+    "expiration_date": "2026-02-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-007",
+    "employee_id": "EMP-002",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-05-01",
+    "expiration_date": "2026-05-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-008",
+    "employee_id": "EMP-002",
+    "cert_id": "CERT-ACLS",
+    "issue_date": "2023-08-10",
+    "expiration_date": "2025-08-10",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-009",
+    "employee_id": "EMP-002",
+    "cert_id": "CERT-RN-LIC",
+    "issue_date": "2024-03-01",
+    "expiration_date": "2026-03-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-010",
+    "employee_id": "EMP-002",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-01-10",
+    "expiration_date": "2026-01-10",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-011",
+    "employee_id": "EMP-002",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-01-10",
+    "expiration_date": "2026-01-10",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-012",
+    "employee_id": "EMP-002",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-01-10",
+    "expiration_date": "2026-01-10",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-013",
+    "employee_id": "EMP-003",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-07-01",
+    "expiration_date": "2026-07-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-014",
+    "employee_id": "EMP-003",
+    "cert_id": "CERT-ACLS",
+    "issue_date": "2024-07-01",
+    "expiration_date": "2026-07-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-015",
+    "employee_id": "EMP-003",
+    "cert_id": "CERT-RT-LIC",
+    "issue_date": "2024-02-01",
+    "expiration_date": "2026-02-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-016",
+    "employee_id": "EMP-003",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-03-01",
+    "expiration_date": "2026-03-01",
+    "status": "Expiring Soon"
+  },
+  {
+    "record_id": "EC-017",
+    "employee_id": "EMP-003",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-03-01",
+    "expiration_date": "2026-03-01",
+    "status": "Expiring Soon"
+  },
+  {
+    "record_id": "EC-018",
+    "employee_id": "EMP-003",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-03-01",
+    "expiration_date": "2026-05-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-019",
+    "employee_id": "EMP-004",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-09-01",
+    "expiration_date": "2026-09-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-020",
+    "employee_id": "EMP-004",
+    "cert_id": "CERT-ACLS",
+    "issue_date": "2024-09-01",
+    "expiration_date": "2026-09-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-021",
+    "employee_id": "EMP-004",
+    "cert_id": "CERT-PALS",
+    "issue_date": "2024-09-01",
+    "expiration_date": "2026-09-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-022",
+    "employee_id": "EMP-004",
+    "cert_id": "CERT-DEA",
+    "issue_date": "2023-06-01",
+    "expiration_date": "2026-06-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-023",
+    "employee_id": "EMP-004",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-06-01",
+    "expiration_date": "2026-06-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-024",
+    "employee_id": "EMP-005",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-04-01",
+    "expiration_date": "2026-04-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-025",
+    "employee_id": "EMP-005",
+    "cert_id": "CERT-ACLS",
+    "issue_date": "2024-04-01",
+    "expiration_date": "2026-04-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-026",
+    "employee_id": "EMP-005",
+    "cert_id": "CERT-RN-LIC",
+    "issue_date": "2024-01-01",
+    "expiration_date": "2026-01-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-027",
+    "employee_id": "EMP-005",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2024-12-01",
+    "expiration_date": "2025-12-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-028",
+    "employee_id": "EMP-005",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-01-01",
+    "expiration_date": "2026-01-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-029",
+    "employee_id": "EMP-005",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-01-01",
+    "expiration_date": "2026-01-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-030",
+    "employee_id": "EMP-006",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-10-01",
+    "expiration_date": "2026-10-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-031",
+    "employee_id": "EMP-006",
+    "cert_id": "CERT-NBSTSA",
+    "issue_date": "2024-10-01",
+    "expiration_date": "2026-10-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-032",
+    "employee_id": "EMP-006",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-04-01",
+    "expiration_date": "2026-04-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-033",
+    "employee_id": "EMP-006",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-04-01",
+    "expiration_date": "2026-04-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-034",
+    "employee_id": "EMP-006",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-04-01",
+    "expiration_date": "2026-04-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-035",
+    "employee_id": "EMP-007",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-03-01",
+    "expiration_date": "2026-03-01",
+    "status": "Expiring Soon"
+  },
+  {
+    "record_id": "EC-036",
+    "employee_id": "EMP-007",
+    "cert_id": "CERT-ARRT",
+    "issue_date": "2023-09-01",
+    "expiration_date": "2025-09-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-037",
+    "employee_id": "EMP-007",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-05-01",
+    "expiration_date": "2026-05-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-038",
+    "employee_id": "EMP-007",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-05-01",
+    "expiration_date": "2026-05-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-039",
+    "employee_id": "EMP-008",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-08-01",
+    "expiration_date": "2026-08-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-040",
+    "employee_id": "EMP-008",
+    "cert_id": "CERT-LPN-LIC",
+    "issue_date": "2024-08-01",
+    "expiration_date": "2026-08-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-041",
+    "employee_id": "EMP-008",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-07-01",
+    "expiration_date": "2026-07-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-042",
+    "employee_id": "EMP-008",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-07-01",
+    "expiration_date": "2026-07-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-043",
+    "employee_id": "EMP-008",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-07-01",
+    "expiration_date": "2026-07-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-044",
+    "employee_id": "EMP-009",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-11-01",
+    "expiration_date": "2026-11-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-045",
+    "employee_id": "EMP-009",
+    "cert_id": "CERT-ACLS",
+    "issue_date": "2024-11-01",
+    "expiration_date": "2026-11-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-046",
+    "employee_id": "EMP-009",
+    "cert_id": "CERT-DEA",
+    "issue_date": "2023-11-01",
+    "expiration_date": "2026-11-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-047",
+    "employee_id": "EMP-009",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-08-01",
+    "expiration_date": "2026-08-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-048",
+    "employee_id": "EMP-009",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-08-01",
+    "expiration_date": "2026-08-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-049",
+    "employee_id": "EMP-010",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-01-08",
+    "expiration_date": "2026-01-08",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-050",
+    "employee_id": "EMP-010",
+    "cert_id": "CERT-CNA",
+    "issue_date": "2024-01-08",
+    "expiration_date": "2026-01-08",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-051",
+    "employee_id": "EMP-010",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-01-08",
+    "expiration_date": "2026-01-08",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-052",
+    "employee_id": "EMP-010",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-01-08",
+    "expiration_date": "2026-01-08",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-053",
+    "employee_id": "EMP-011",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2023-01-01",
+    "expiration_date": "2025-01-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-054",
+    "employee_id": "EMP-011",
+    "cert_id": "CERT-ACLS",
+    "issue_date": "2023-01-01",
+    "expiration_date": "2025-01-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-055",
+    "employee_id": "EMP-011",
+    "cert_id": "CERT-RN-LIC",
+    "issue_date": "2024-06-01",
+    "expiration_date": "2026-06-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-056",
+    "employee_id": "EMP-011",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2024-06-01",
+    "expiration_date": "2025-06-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-057",
+    "employee_id": "EMP-011",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-01-15",
+    "expiration_date": "2026-01-15",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-058",
+    "employee_id": "EMP-011",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-01-15",
+    "expiration_date": "2026-01-15",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-059",
+    "employee_id": "EMP-012",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2023-03-01",
+    "expiration_date": "2025-03-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-060",
+    "employee_id": "EMP-012",
+    "cert_id": "CERT-ACLS",
+    "issue_date": "2024-05-01",
+    "expiration_date": "2026-05-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-061",
+    "employee_id": "EMP-012",
+    "cert_id": "CERT-RN-LIC",
+    "issue_date": "2024-01-01",
+    "expiration_date": "2026-01-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-062",
+    "employee_id": "EMP-012",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2024-02-01",
+    "expiration_date": "2025-02-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-063",
+    "employee_id": "EMP-012",
+    "cert_id": "CERT-IC",
+    "issue_date": "2024-02-01",
+    "expiration_date": "2025-02-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-064",
+    "employee_id": "EMP-012",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-03-01",
+    "expiration_date": "2026-03-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-065",
+    "employee_id": "EMP-013",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2023-05-01",
+    "expiration_date": "2025-05-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-066",
+    "employee_id": "EMP-013",
+    "cert_id": "CERT-ACLS",
+    "issue_date": "2023-05-01",
+    "expiration_date": "2025-05-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-067",
+    "employee_id": "EMP-013",
+    "cert_id": "CERT-RT-LIC",
+    "issue_date": "2024-08-01",
+    "expiration_date": "2026-08-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-068",
+    "employee_id": "EMP-013",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2024-11-01",
+    "expiration_date": "2025-11-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-069",
+    "employee_id": "EMP-013",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-04-01",
+    "expiration_date": "2026-04-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-070",
+    "employee_id": "EMP-013",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-04-01",
+    "expiration_date": "2026-04-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-071",
+    "employee_id": "EMP-014",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-07-01",
+    "expiration_date": "2026-07-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-072",
+    "employee_id": "EMP-014",
+    "cert_id": "CERT-ACLS",
+    "issue_date": "2024-07-01",
+    "expiration_date": "2026-07-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-073",
+    "employee_id": "EMP-014",
+    "cert_id": "CERT-PALS",
+    "issue_date": "2024-07-01",
+    "expiration_date": "2026-07-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-074",
+    "employee_id": "EMP-014",
+    "cert_id": "CERT-DEA",
+    "issue_date": "2023-07-01",
+    "expiration_date": "2026-07-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-075",
+    "employee_id": "EMP-014",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2024-06-01",
+    "expiration_date": "2025-06-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-076",
+    "employee_id": "EMP-015",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-09-03",
+    "expiration_date": "2026-09-03",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-077",
+    "employee_id": "EMP-015",
+    "cert_id": "CERT-ACLS",
+    "issue_date": "2024-09-03",
+    "expiration_date": "2026-09-03",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-078",
+    "employee_id": "EMP-015",
+    "cert_id": "CERT-RN-LIC",
+    "issue_date": "2024-09-03",
+    "expiration_date": "2026-09-03",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-079",
+    "employee_id": "EMP-015",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-09-03",
+    "expiration_date": "2026-09-03",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-080",
+    "employee_id": "EMP-015",
+    "cert_id": "CERT-IC",
+    "issue_date": "2024-09-03",
+    "expiration_date": "2025-09-03",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-081",
+    "employee_id": "EMP-015",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-09-03",
+    "expiration_date": "2026-09-03",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-082",
+    "employee_id": "EMP-016",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-04-17",
+    "expiration_date": "2026-04-17",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-083",
+    "employee_id": "EMP-016",
+    "cert_id": "CERT-ACLS",
+    "issue_date": "2024-04-17",
+    "expiration_date": "2026-04-17",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-084",
+    "employee_id": "EMP-016",
+    "cert_id": "CERT-DEA",
+    "issue_date": "2023-04-17",
+    "expiration_date": "2026-04-17",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-085",
+    "employee_id": "EMP-016",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2024-04-17",
+    "expiration_date": "2025-04-17",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-086",
+    "employee_id": "EMP-016",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-04-17",
+    "expiration_date": "2026-04-17",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-087",
+    "employee_id": "EMP-017",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-05-22",
+    "expiration_date": "2026-05-22",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-088",
+    "employee_id": "EMP-017",
+    "cert_id": "CERT-PTCB",
+    "issue_date": "2024-05-22",
+    "expiration_date": "2026-05-22",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-089",
+    "employee_id": "EMP-017",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-05-22",
+    "expiration_date": "2026-05-22",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-090",
+    "employee_id": "EMP-018",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-07-04",
+    "expiration_date": "2026-07-04",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-091",
+    "employee_id": "EMP-018",
+    "cert_id": "CERT-LPN-LIC",
+    "issue_date": "2024-07-04",
+    "expiration_date": "2026-07-04",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-092",
+    "employee_id": "EMP-018",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2024-07-04",
+    "expiration_date": "2025-07-04",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-093",
+    "employee_id": "EMP-018",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-07-04",
+    "expiration_date": "2026-07-04",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-094",
+    "employee_id": "EMP-018",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-07-04",
+    "expiration_date": "2026-07-04",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-095",
+    "employee_id": "EMP-019",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-03-11",
+    "expiration_date": "2026-03-11",
+    "status": "Expiring Soon"
+  },
+  {
+    "record_id": "EC-096",
+    "employee_id": "EMP-019",
+    "cert_id": "CERT-CNA",
+    "issue_date": "2024-03-11",
+    "expiration_date": "2026-03-11",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-097",
+    "employee_id": "EMP-019",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-03-11",
+    "expiration_date": "2026-03-11",
+    "status": "Expiring Soon"
+  },
+  {
+    "record_id": "EC-098",
+    "employee_id": "EMP-019",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-03-11",
+    "expiration_date": "2026-03-11",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-099",
+    "employee_id": "EMP-020",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2022-09-01",
+    "expiration_date": "2024-09-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-100",
+    "employee_id": "EMP-020",
+    "cert_id": "CERT-ACLS",
+    "issue_date": "2022-09-01",
+    "expiration_date": "2024-09-01",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-101",
+    "employee_id": "EMP-020",
+    "cert_id": "CERT-RN-LIC",
+    "issue_date": "2024-05-29",
+    "expiration_date": "2026-05-29",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-102",
+    "employee_id": "EMP-020",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2023-05-29",
+    "expiration_date": "2024-05-29",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-103",
+    "employee_id": "EMP-020",
+    "cert_id": "CERT-IC",
+    "issue_date": "2023-05-29",
+    "expiration_date": "2024-05-29",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-104",
+    "employee_id": "EMP-020",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2023-05-29",
+    "expiration_date": "2024-05-29",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-105",
+    "employee_id": "EMP-021",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-04-01",
+    "expiration_date": "2026-04-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-106",
+    "employee_id": "EMP-021",
+    "cert_id": "CERT-NBSTSA",
+    "issue_date": "2024-04-01",
+    "expiration_date": "2026-04-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-107",
+    "employee_id": "EMP-021",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-04-01",
+    "expiration_date": "2026-04-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-108",
+    "employee_id": "EMP-021",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-04-01",
+    "expiration_date": "2026-04-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-109",
+    "employee_id": "EMP-021",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-04-01",
+    "expiration_date": "2026-04-01",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-110",
+    "employee_id": "EMP-022",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-10-18",
+    "expiration_date": "2026-10-18",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-111",
+    "employee_id": "EMP-022",
+    "cert_id": "CERT-ARRT",
+    "issue_date": "2023-10-18",
+    "expiration_date": "2025-10-18",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-112",
+    "employee_id": "EMP-022",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-10-18",
+    "expiration_date": "2026-10-18",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-113",
+    "employee_id": "EMP-022",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-10-18",
+    "expiration_date": "2026-10-18",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-114",
+    "employee_id": "EMP-023",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-08-07",
+    "expiration_date": "2026-08-07",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-115",
+    "employee_id": "EMP-023",
+    "cert_id": "CERT-CNA",
+    "issue_date": "2024-08-07",
+    "expiration_date": "2026-08-07",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-116",
+    "employee_id": "EMP-023",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2025-08-07",
+    "expiration_date": "2026-08-07",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-117",
+    "employee_id": "EMP-023",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-08-07",
+    "expiration_date": "2026-08-07",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-118",
+    "employee_id": "EMP-024",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-01-15",
+    "expiration_date": "2026-01-15",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-119",
+    "employee_id": "EMP-024",
+    "cert_id": "CERT-LPN-LIC",
+    "issue_date": "2024-01-15",
+    "expiration_date": "2026-01-15",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-120",
+    "employee_id": "EMP-024",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2024-01-15",
+    "expiration_date": "2025-01-15",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-121",
+    "employee_id": "EMP-024",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-01-15",
+    "expiration_date": "2026-01-15",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-122",
+    "employee_id": "EMP-024",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-01-15",
+    "expiration_date": "2026-01-15",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-123",
+    "employee_id": "EMP-025",
+    "cert_id": "CERT-BLS",
+    "issue_date": "2024-12-03",
+    "expiration_date": "2026-12-03",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-124",
+    "employee_id": "EMP-025",
+    "cert_id": "CERT-NBSTSA",
+    "issue_date": "2024-12-03",
+    "expiration_date": "2026-12-03",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-125",
+    "employee_id": "EMP-025",
+    "cert_id": "CERT-HIPAA",
+    "issue_date": "2024-12-03",
+    "expiration_date": "2025-12-03",
+    "status": "Expired"
+  },
+  {
+    "record_id": "EC-126",
+    "employee_id": "EMP-025",
+    "cert_id": "CERT-IC",
+    "issue_date": "2025-12-03",
+    "expiration_date": "2026-12-03",
+    "status": "Active"
+  },
+  {
+    "record_id": "EC-127",
+    "employee_id": "EMP-025",
+    "cert_id": "CERT-BBP",
+    "issue_date": "2025-12-03",
+    "expiration_date": "2026-12-03",
+    "status": "Active"
+  }
+]

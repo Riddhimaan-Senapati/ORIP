@@ -9,6 +9,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^1.2.12",
+    "@ai-sdk/react": "^3.0.118",
+    "@orip-frontend/sdk": "^0.1.0",
+    "@osdk/client": "^2.7.5",
+    "@osdk/foundry": "^2.54.0",
+    "@osdk/oauth": "^1.7.0",
+    "ai": "^4.3.19",
     "next": "16.1.7",
     "react": "19.2.3",
     "react-dom": "19.2.3"

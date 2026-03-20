@@ -1,28 +1,31 @@
 import Link from "next/link";
 import ScoreRing from "@/components/ScoreRing";
-import {
-  facilities,
-  departments,
-  employees,
-  employeeCertifications,
-  networkStats,
-} from "@/lib/data";
+import { getNetworkPageData } from "@/lib/osdk-queries";
+import type { Facility, Department, Employee, EmployeeCertification } from "@/lib/data";
+
+export const dynamic = "force-dynamic";
 
 function FacilityCard({
   facility,
   delay,
+  allEmployees,
+  allCerts,
+  allDepts,
 }: {
-  facility: (typeof facilities)[0];
+  facility: Facility;
   delay: string;
+  allEmployees: Employee[];
+  allCerts: EmployeeCertification[];
+  allDepts: Department[];
 }) {
   const score = facility.readinessScore;
   const isRed = score < 80;
   const isYellow = score >= 80 && score < 90;
   const cardClass = isRed ? "card card-critical" : isYellow ? "card card-warning" : "card card-good";
 
-  const depts = departments.filter((d) => d.facilityId === facility.id);
-  const emps = employees.filter((e) => e.facilityId === facility.id);
-  const certs = employeeCertifications.filter((ec) =>
+  const depts = allDepts.filter((d) => d.facilityId === facility.id);
+  const emps = allEmployees.filter((e) => e.facilityId === facility.id);
+  const certs = allCerts.filter((ec) =>
     emps.some((e) => e.id === ec.employeeId)
   );
   const expiredCount = certs.filter((c) => c.status === "Expired").length;
@@ -177,8 +180,17 @@ function Stat({ label, value, color }: { label: string; value: number; color?: s
   );
 }
 
-export default function NetworkDashboard() {
-  const stats = networkStats();
+export default async function NetworkDashboard() {
+  const { facilities, employees, employeeCertifications, departments } = await getNetworkPageData();
+
+  const totalEmployees = employees.length;
+  const expired = employeeCertifications.filter((ec) => ec.status === "Expired").length;
+  const expiringSoon = employeeCertifications.filter((ec) => ec.status === "Expiring Soon").length;
+  const avgReadiness =
+    employees.length > 0
+      ? Math.round(employees.reduce((sum, e) => sum + e.readinessScore, 0) / employees.length)
+      : 0;
+  const stats = { totalEmployees, expired, expiringSoon, avgReadiness };
 
   // Critical employees (score < 80)
   const criticalEmployees = employees
@@ -215,7 +227,7 @@ export default function NetworkDashboard() {
           Workforce Readiness
         </h1>
         <p style={{ fontFamily: "var(--font-mono)", fontSize: "13px", color: "var(--text-secondary)", margin: 0 }}>
-          Real-time certification and compliance status across 3 facilities
+          Real-time certification and compliance status across {facilities.length} facilities
         </p>
       </div>
 
@@ -299,7 +311,14 @@ export default function NetworkDashboard() {
         }}
       >
         {facilities.map((facility, i) => (
-          <FacilityCard key={facility.id} facility={facility} delay={String(i + 3)} />
+          <FacilityCard
+            key={facility.id}
+            facility={facility}
+            delay={String(i + 3)}
+            allEmployees={employees}
+            allCerts={employeeCertifications}
+            allDepts={departments}
+          />
         ))}
       </div>
 

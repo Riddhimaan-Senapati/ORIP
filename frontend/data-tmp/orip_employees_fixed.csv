@@ -1,0 +1,26 @@
+employee_id,first_name,last_name,role_id,facility_id,department,hire_date,employment_status,readiness_score
+EMP-001,Sarah,Chen,ROLE-RN,FAC-0001,ICU,2021-03-15,Active,100
+EMP-002,Marcus,Johnson,ROLE-RN,FAC-0001,ICU,2019-07-22,Active,83
+EMP-003,Priya,Patel,ROLE-RT,FAC-0001,ICU,2022-01-10,Active,100
+EMP-004,James,Rivera,ROLE-MD-EM,FAC-0001,Emergency,2018-11-05,Active,100
+EMP-005,Aisha,Williams,ROLE-RN,FAC-0001,Emergency,2020-04-18,Active,83
+EMP-006,Daniel,Kim,ROLE-ST,FAC-0001,Surgery,2023-02-28,Active,100
+EMP-007,Natalie,Torres,ROLE-RAD,FAC-0001,Radiology,2021-09-14,Active,75
+EMP-008,Leon,Brooks,ROLE-LPN,FAC-0001,ICU,2022-06-30,Active,100
+EMP-009,Hannah,Fischer,ROLE-PA,FAC-0001,Emergency,2019-12-01,Active,100
+EMP-010,Carlos,Moreno,ROLE-NA,FAC-0001,ICU,2024-01-08,Active,100
+EMP-011,Diana,Nguyen,ROLE-RN,FAC-0002,ICU,2020-08-15,Active,33
+EMP-012,Tyrone,Adams,ROLE-RN,FAC-0002,ICU,2019-03-20,Active,50
+EMP-013,Mei,Lin,ROLE-RT,FAC-0002,ICU,2021-11-12,Active,40
+EMP-014,Kevin,O'Brien,ROLE-MD-EM,FAC-0002,Emergency,2018-06-01,Active,80
+EMP-015,Fatima,Hassan,ROLE-RN,FAC-0002,Emergency,2022-09-03,Active,83
+EMP-016,Roberto,Fernandez,ROLE-PA,FAC-0002,General Medicine,2020-02-17,Active,80
+EMP-017,Sandra,Mitchell,ROLE-PHARM,FAC-0002,Pharmacy,2023-05-22,Active,100
+EMP-018,Jaylen,Carter,ROLE-LPN,FAC-0002,General Medicine,2021-07-04,Active,80
+EMP-019,Ingrid,Sorensen,ROLE-NA,FAC-0002,General Medicine,2024-03-11,Active,75
+EMP-020,Ahmad,Khalil,ROLE-RN,FAC-0002,ICU,2020-05-29,Active,17
+EMP-021,Olivia,Grant,ROLE-ST,FAC-0003,Surgery,2021-04-01,Active,100
+EMP-022,Nathan,Park,ROLE-RAD,FAC-0003,Radiology,2022-10-18,Active,75
+EMP-023,Grace,Okonkwo,ROLE-NA,FAC-0003,General Medicine,2023-08-07,Active,100
+EMP-024,Ethan,Walsh,ROLE-LPN,FAC-0003,General Medicine,2019-01-15,Active,80
+EMP-025,Sofia,Reyes,ROLE-ST,FAC-0003,Surgery,2020-12-03,Active,80
