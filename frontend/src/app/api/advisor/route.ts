@@ -112,10 +112,6 @@ export async function POST(req: NextRequest) {
     maxTokens: 1024,
   });
 
-  result.usage
-    .then((u) => console.log("[advisor] tokens used:", u))
-    .catch((err) => console.error("[advisor] stream error:", err));
-
   return result.toDataStreamResponse({
     getErrorMessage: (error) => {
       const msg = error instanceof Error ? error.message : String(error);
