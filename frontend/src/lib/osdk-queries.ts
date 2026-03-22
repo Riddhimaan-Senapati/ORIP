@@ -46,12 +46,17 @@ async function fetchRawRoles() {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function toEmployee(e: any): Employee {
+  const rawFacilityId: string = e.facilityId ?? "";
+  // Normalize FAC-001 → FAC-0001 (old dataset uses 3-digit, mockFacilities uses 4-digit)
+  const facilityId = rawFacilityId.replace(/^([A-Za-z]+-?)(\d+)$/, (_, prefix: string, num: string) =>
+    `${prefix}${num.padStart(4, "0")}`
+  );
   return {
     id: e.employeeId ?? "",
     firstName: e.firstName ?? "",
     lastName: e.lastName ?? "",
     roleId: e.roleId ?? "",
-    facilityId: e.facilityId ?? "",
+    facilityId,
     department: e.department ?? "",
     hireDate: e.hireDate ?? "",
     employmentStatus: e.employmentStatus ?? "Active",
@@ -64,13 +69,21 @@ function toEmployee(e: any): Employee {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function toEmpCert(ec: any): EmployeeCertification {
+  const expiryDate = ec.expirationDate ?? "";
+  // Always recompute status from expiration date — the stored value is stale
+  // (it was set at dataset upload time and never refreshed).
+  const daysLeft = expiryDate
+    ? Math.ceil((new Date(expiryDate).getTime() - Date.now()) / 86_400_000)
+    : 9999;
+  const status: "Active" | "Expiring Soon" | "Expired" =
+    daysLeft < 0 ? "Expired" : daysLeft < 60 ? "Expiring Soon" : "Active";
   return {
     recordId: ec.recordId ?? "",
     employeeId: ec.employeeId ?? "",
     certId: ec.certId ?? "",
     issueDate: ec.issueDate ?? "",
-    expiryDate: ec.expirationDate ?? "",
-    status: (ec.status ?? "Active") as "Active" | "Expiring Soon" | "Expired",
+    expiryDate,
+    status,
   };
 }
 
@@ -114,6 +127,23 @@ function toFacility(f: any, employees: Employee[]): Facility {
     accreditationStatus: f.accreditationStatus ?? "",
     readinessScore,
   };
+}
+
+// Compute readiness live from active certs vs role-required certs.
+// The stored readinessScore in the Foundry dataset is always 0 (not pre-computed).
+function computeReadinessScore(
+  emp: Employee,
+  certs: EmployeeCertification[],
+  roleMap: Map<string, Role>
+): number {
+  const required = roleMap.get(emp.roleId)?.requiredCertIds ?? [];
+  if (required.length === 0) return 100;
+  // Count both Active and Expiring Soon — cert is still valid, just needs renewal
+  const activeCertIds = certs
+    .filter((c) => c.employeeId === emp.id && (c.status === "Active" || c.status === "Expiring Soon"))
+    .map((c) => c.certId);
+  const matched = required.filter((r) => activeCertIds.includes(r));
+  return Math.round((matched.length / required.length) * 100);
 }
 
 function computeDepartments(
@@ -161,6 +191,29 @@ export async function getNetworkPageData() {
   const employeeCertifications = rawCerts.map(toEmpCert);
   const roles = rawRoles.map(toRole);
 
+  // Override stored readinessScore with live computation from certifications
+  const roleMap = new Map(roles.map((r) => [r.id, r]));
+  for (const emp of employees) {
+    emp.readinessScore = computeReadinessScore(emp, employeeCertifications, roleMap);
+  }
+
+  // Diagnostic: log first employee's score breakdown
+  if (employees.length > 0) {
+    const sample = employees[0];
+    const sampleRole = roleMap.get(sample.roleId);
+    const sampleActiveCerts = employeeCertifications
+      .filter((c) => c.employeeId === sample.id && c.status === "Active")
+      .map((c) => c.certId);
+    console.log("[osdk-queries] sample employee:", sample.id, sample.roleId,
+      "| facilityId:", sample.facilityId,
+      "| roleFound:", !!sampleRole,
+      "| requiredCerts:", sampleRole?.requiredCertIds,
+      "| activeCerts:", sampleActiveCerts,
+      "| score:", sample.readinessScore,
+      "| totalCerts:", employeeCertifications.length,
+      "| totalRoles:", roles.length);
+  }
+
   // Facility metadata from Foundry (FAC-0001/0002/0003 now match employee facilityId).
   // Readiness scores are computed live from OSDK employee data.
   const facilities: Facility[] = mockFacilities.map((f) => ({
@@ -190,13 +243,20 @@ export async function getFacilityPageData(facilityId: string) {
   ]);
 
   const employees = rawEmployees.map(toEmployee);
-  const facilityEmployees = employees.filter((e) => e.facilityId === facilityId);
   const allCerts = rawCerts.map(toEmpCert);
   const allCertifications = rawCertifications.map(toCertification);
+  const roles = rawRoles.map(toRole);
+
+  // Override stored readinessScore with live computation from certifications
+  const roleMap = new Map(roles.map((r) => [r.id, r]));
+  for (const emp of employees) {
+    emp.readinessScore = computeReadinessScore(emp, allCerts, roleMap);
+  }
+
+  const facilityEmployees = employees.filter((e) => e.facilityId === facilityId);
   const facilityCerts = allCerts.filter((ec) =>
     facilityEmployees.some((e) => e.id === ec.employeeId)
   );
-  const roles = rawRoles.map(toRole);
 
   const readinessScore =
     facilityEmployees.length > 0
@@ -206,7 +266,7 @@ export async function getFacilityPageData(facilityId: string) {
 
   const departments = computeDepartments(facilityEmployees, facilityCerts);
   const certMap = new Map(allCertifications.map((c) => [c.id, c]));
-  const roleMap = new Map(roles.map((r) => [r.id, r]));
+  // roleMap already built above for score computation — reuse it
 
   return { facility, departments, facilityEmployees, facilityCerts, certMap, roleMap };
 }
@@ -220,12 +280,19 @@ export async function getEmployeePageData(employeeId: string) {
   ]);
 
   const employees = rawEmployees.map(toEmployee);
-  const employee = employees.find((e) => e.id === employeeId);
-  if (!employee) return null;
-
   const allCerts = rawCerts.map(toEmpCert);
   const allCertifications = rawCertifications.map(toCertification);
   const roles = rawRoles.map(toRole);
+
+  // Override stored readinessScore with live computation from certifications
+  const roleMap = new Map(roles.map((r) => [r.id, r]));
+  for (const emp of employees) {
+    emp.readinessScore = computeReadinessScore(emp, allCerts, roleMap);
+  }
+
+  const employee = employees.find((e) => e.id === employeeId);
+  if (!employee) return null;
+
   const role = roles.find((r) => r.id === employee.roleId);
 
   const mockFacility = mockFacilities.find((f) => f.id === employee.facilityId);

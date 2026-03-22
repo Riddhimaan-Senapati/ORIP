@@ -1,5 +1,5 @@
 import { streamText } from "ai";
-import { anthropic } from "@ai-sdk/anthropic";
+import { google } from "@ai-sdk/google";
 import { NextRequest } from "next/server";
 import { getNetworkPageData } from "@/lib/osdk-queries";
 
@@ -96,14 +96,31 @@ export async function POST(req: NextRequest) {
   //   return new Response(result.response);
   // This routes the LLM call through Palantir AIP instead of directly to Anthropic.
 
-  const systemPrompt = await buildSystemPrompt();
+  let systemPrompt: string;
+  try {
+    systemPrompt = await buildSystemPrompt();
+  } catch (err) {
+    console.error("[advisor] buildSystemPrompt failed:", err);
+    systemPrompt =
+      "You are the ORIP Clinical Readiness Advisor. Live Foundry data is temporarily unavailable. Let the user know and suggest they check the server logs.";
+  }
 
   const result = streamText({
-    model: anthropic("claude-3-5-haiku-20241022"),
+    model: google("gemini-2.5-flash"),
     system: systemPrompt,
     messages,
     maxTokens: 1024,
   });
 
-  return result.toDataStreamResponse();
+  result.usage
+    .then((u) => console.log("[advisor] tokens used:", u))
+    .catch((err) => console.error("[advisor] stream error:", err));
+
+  return result.toDataStreamResponse({
+    getErrorMessage: (error) => {
+      const msg = error instanceof Error ? error.message : String(error);
+      console.error("[advisor] LLM error:", msg);
+      return msg;
+    },
+  });
 }

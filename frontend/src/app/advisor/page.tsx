@@ -71,14 +71,14 @@ function MessageContent({ text }: { text: string }) {
 }
 
 export default function AdvisorPage() {
-  const { messages, input, handleInputChange, handleSubmit, isLoading, append } = useChat({
+  const { messages, input, handleInputChange, handleSubmit, isLoading, append, error } = useChat({
     api: "/api/advisor",
     initialMessages: [
       {
         id: "welcome",
         role: "assistant",
         content:
-          "Hello. I'm the **ORIP Clinical Readiness Advisor**, grounded in live Foundry ontology data across all 3 facilities and 25 staff members.\n\nAsk me anything about certification compliance, readiness scores, staffing gaps, or shift coverage.",
+          "Hello. I'm the **ORIP Clinical Readiness Advisor**, grounded in live Foundry ontology data across all 3 facilities and 25 staff members.\n\nAsk me anything about certification compliance, readiness scores, staffing gaps, or coverage needs.",
       },
     ],
   });
@@ -333,6 +333,24 @@ export default function AdvisorPage() {
             </div>
           </div>
         )}
+
+        {/* Error display */}
+        {error && (
+          <div
+            style={{
+              padding: "12px 16px",
+              borderRadius: "8px",
+              background: "rgba(244,63,94,0.08)",
+              border: "1px solid rgba(244,63,94,0.25)",
+              fontFamily: "var(--font-mono)",
+              fontSize: "12px",
+              color: "var(--rose)",
+            }}
+          >
+            Error: {error.message}. Check the server terminal for details.
+          </div>
+        )}
+
         <div ref={bottomRef} />
       </div>
 

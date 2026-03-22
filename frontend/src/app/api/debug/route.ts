@@ -1,21 +1,48 @@
 import { NextResponse } from "next/server";
 import { foundryClient } from "@/lib/foundry";
-import { employee as $employee } from "@orip-frontend/sdk";
+import {
+  employee as $employee,
+  employeeCertification as $empCert,
+  role as $role,
+} from "@orip-frontend/sdk";
+import { roles as mockRoles } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
 
 export async function GET() {
-  const { data } = await foundryClient($employee).fetchPage({ $pageSize: 3 });
-  const raw = data.map((e) => ({
-    employeeId: e.employeeId,
-    firstName: e.firstName,
-    lastName: e.lastName,
-    facilityId: e.facilityId,
-    readinessScore: e.readinessScore,
-    department: e.department,
-    roleId: e.roleId,
-    // dump full object keys to see what came back
-    allKeys: Object.keys(e).filter((k) => !k.startsWith("$")),
-  }));
-  return NextResponse.json({ count: data.length, employees: raw });
+  try {
+    const [empPage, certPage, rolePage] = await Promise.all([
+      foundryClient($employee).fetchPage({ $pageSize: 3 }),
+      foundryClient($empCert).fetchPage({ $pageSize: 10 }),
+      foundryClient($role).fetchPage({ $pageSize: 5 }),
+    ]);
+
+    const employees = empPage.data.map((e) => ({
+      employeeId: e.employeeId,
+      firstName: e.firstName,
+      facilityId: e.facilityId,
+      roleId: e.roleId,
+      readinessScore: e.readinessScore,
+    }));
+
+    const certs = certPage.data.map((ec) => ({
+      recordId: ec.recordId,
+      employeeId: ec.employeeId,
+      certId: ec.certId,
+      expirationDate: ec.expirationDate,
+      expirationDateType: typeof ec.expirationDate,
+      status: ec.status,
+    }));
+
+    const roles = rolePage.data.map((r) => ({
+      roleId: r.roleId,
+      title: r.title,
+      mockFound: mockRoles.some((m) => m.id === r.roleId),
+      requiredCertIds: mockRoles.find((m) => m.id === r.roleId)?.requiredCertIds ?? [],
+    }));
+
+    return NextResponse.json({ employees, certs, roles, today: new Date().toISOString() });
+  } catch (err) {
+    return NextResponse.json({ error: String(err) }, { status: 500 });
+  }
 }
