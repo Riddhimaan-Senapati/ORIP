@@ -1,20 +1,18 @@
 import { NextResponse } from "next/server";
 import { getFoundryClient } from "@/lib/foundry";
-import {
-  employee as $employee,
-  employeeCertification as $empCert,
-  role as $role,
-} from "@orip-frontend/sdk";
 import { roles as mockRoles } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
+    const [client, { employee: $employee, employeeCertification: $empCert, role: $role }] =
+      await Promise.all([getFoundryClient(), import("@orip-frontend/sdk")]);
+
     const [empPage, certPage, rolePage] = await Promise.all([
-      getFoundryClient()($employee).fetchPage({ $pageSize: 3 }),
-      getFoundryClient()($empCert).fetchPage({ $pageSize: 10 }),
-      getFoundryClient()($role).fetchPage({ $pageSize: 5 }),
+      client($employee).fetchPage({ $pageSize: 3 }),
+      client($empCert).fetchPage({ $pageSize: 10 }),
+      client($role).fetchPage({ $pageSize: 5 }),
     ]);
 
     const employees = empPage.data.map((e) => ({

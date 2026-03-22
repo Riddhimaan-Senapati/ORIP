@@ -1,12 +1,13 @@
 import { unstable_noStore as noStore } from "next/cache";
 import { getFoundryClient } from "./foundry";
-import {
-  facility as $facility,
-  employee as $employee,
-  employeeCertification as $empCert,
-  certification as $certification,
-  role as $role,
-} from "@orip-frontend/sdk";
+
+// Dynamic import — same reason as foundry.ts: Turbopack bundles static imports
+// and evaluates them immediately, triggering module-level OSDK initialization.
+let _sdk: typeof import("@orip-frontend/sdk") | undefined;
+async function getSdk() {
+  if (!_sdk) _sdk = await import("@orip-frontend/sdk");
+  return _sdk;
+}
 import type { Facility, Employee, EmployeeCertification, Certification, Department, Role } from "./data";
 import { facilities as mockFacilities, roles as mockRoles } from "./data";
 
@@ -14,31 +15,36 @@ import { facilities as mockFacilities, roles as mockRoles } from "./data";
 
 async function fetchRawFacilities() {
   noStore();
-  const { data } = await getFoundryClient()($facility).fetchPage({ $pageSize: 50 });
+  const [client, { facility: $facility }] = await Promise.all([getFoundryClient(), getSdk()]);
+  const { data } = await client($facility).fetchPage({ $pageSize: 50 });
   return data;
 }
 
 async function fetchRawEmployees() {
   noStore();
-  const { data } = await getFoundryClient()($employee).fetchPage({ $pageSize: 500 });
+  const [client, { employee: $employee }] = await Promise.all([getFoundryClient(), getSdk()]);
+  const { data } = await client($employee).fetchPage({ $pageSize: 500 });
   return data;
 }
 
 async function fetchRawEmpCerts() {
   noStore();
-  const { data } = await getFoundryClient()($empCert).fetchPage({ $pageSize: 500 });
+  const [client, { employeeCertification: $empCert }] = await Promise.all([getFoundryClient(), getSdk()]);
+  const { data } = await client($empCert).fetchPage({ $pageSize: 500 });
   return data;
 }
 
 async function fetchRawCertifications() {
   noStore();
-  const { data } = await getFoundryClient()($certification).fetchPage({ $pageSize: 100 });
+  const [client, { certification: $certification }] = await Promise.all([getFoundryClient(), getSdk()]);
+  const { data } = await client($certification).fetchPage({ $pageSize: 100 });
   return data;
 }
 
 async function fetchRawRoles() {
   noStore();
-  const { data } = await getFoundryClient()($role).fetchPage({ $pageSize: 50 });
+  const [client, { role: $role }] = await Promise.all([getFoundryClient(), getSdk()]);
+  const { data } = await client($role).fetchPage({ $pageSize: 50 });
   return data;
 }
 
