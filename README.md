@@ -3,7 +3,7 @@
 > A Palantir Foundry OSDK application that tracks certification compliance across a network of healthcare facilities, built for the Palantir Build Challenge.
 
 **Live demo:** _deploy to Vercel (see below)_
-**Stack:** Next.js 16 · Palantir OSDK v2 · Vercel AI SDK · Anthropic Claude
+**Stack:** Next.js 16 · Palantir OSDK v2 · Vercel AI SDK · Google Gemini
 
 ---
 
@@ -43,13 +43,15 @@ Auth is handled by a **confidential OAuth client** (CLIENT_ID + CLIENT_SECRET). 
 
 ## Foundry Ontology Reference
 
-| Resource | RID |
+RIDs are specific to each Foundry enrollment. Find yours in Foundry under the resource's **Details** panel.
+
+| Resource | Where to find the RID |
 |---|---|
-| Ontology | `ONTOLOGY_RID_PLACEHOLDER` |
-| ORIP Project | `ri.compass.main.folder.4f3426c8-64d8-46ae-bafb-04c4f6dd3621` |
-| Employee object type | `ri.ontology.main.object-type.f9c078dd-5f63-4f19-b387-8f5e0b7ca4d2` |
-| EmployeeCertification object type | `ri.ontology.main.object-type.def768f6-3151-4119-9d71-75319ac9b94f` |
-| orip_employees dataset (fixed) | `ri.foundry.main.dataset.f97935f4-2cbb-43a4-9fcd-200728d07838` |
+| Ontology | Foundry → Ontology Manager → Settings |
+| ORIP Project | Compass → project folder → Details |
+| Employee object type | Ontology Manager → Employee → Details |
+| EmployeeCertification object type | Ontology Manager → EmployeeCertification → Details |
+| orip_employees dataset | Data Lineage → dataset → Details |
 
 ---
 
@@ -59,7 +61,7 @@ Auth is handled by a **confidential OAuth client** (CLIENT_ID + CLIENT_SECRET). 
 
 - Node.js 20+
 - A valid Palantir Foundry confidential OAuth client (CLIENT_ID + CLIENT_SECRET)
-- An Anthropic API key (for the advisor chat)
+- A Google AI API key (for the advisor chat — free at [aistudio.google.com](https://aistudio.google.com))
 
 ### Setup
 
@@ -77,9 +79,10 @@ cp .env.local .env.local   # already exists, just edit it
 
 ```env
 NEXT_PUBLIC_FOUNDRY_URL=https://your-stack.palantirfoundry.com
+NEXT_PUBLIC_FOUNDRY_ONTOLOGY_RID=ri.ontology.main.ontology.your-ontology-rid
 CLIENT_ID=your_client_id_here
 CLIENT_SECRET=your_client_secret_here
-ANTHROPIC_API_KEY=your_anthropic_api_key_here
+GOOGLE_GENERATIVE_AI_API_KEY=your_google_ai_key_here
 ```
 
 > To create a confidential OAuth client: Foundry → Developer Console → Create application → Backend application
@@ -110,9 +113,10 @@ Set the following environment variables in the Vercel dashboard under **Settings
 | Variable | Description |
 |---|---|
 | `NEXT_PUBLIC_FOUNDRY_URL` | Your Foundry stack URL |
+| `NEXT_PUBLIC_FOUNDRY_ONTOLOGY_RID` | Ontology RID from Foundry Ontology Manager |
 | `CLIENT_ID` | Confidential OAuth client ID from Developer Console |
 | `CLIENT_SECRET` | Confidential OAuth client secret |
-| `ANTHROPIC_API_KEY` | Anthropic API key for advisor chat |
+| `GOOGLE_GENERATIVE_AI_API_KEY` | Google AI API key for advisor chat |
 
 Then redeploy:
 

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const FOUNDRY_URL = process.env.NEXT_PUBLIC_FOUNDRY_URL;
 const FOUNDRY_TOKEN = process.env.FOUNDRY_TOKEN;
-const ONTOLOGY_RID = "ONTOLOGY_RID_PLACEHOLDER";
+const ONTOLOGY_RID = process.env.NEXT_PUBLIC_FOUNDRY_ONTOLOGY_RID!;
 
 // Action API name as set in Foundry Ontology Manager (kebab-case of the display name)
 const ACTION_API_NAME = "renew-certification";

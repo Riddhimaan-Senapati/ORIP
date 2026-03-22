@@ -2,6 +2,7 @@
 .claude
 .npmrc
 PALANTIR_INTEGRATION.md
+DATASETS.md
 foundry.config.json
 .mcp.json
 DEMO_SCRIPT.md
