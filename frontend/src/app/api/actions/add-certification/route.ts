@@ -14,6 +14,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
+  // Generate a unique record ID for the new certification record
+  const record_id = `CERT-REC-${Date.now()}-${Math.random().toString(36).slice(2, 7).toUpperCase()}`;
+
   const res = await fetch(
     `${FOUNDRY_URL}/api/v2/ontologies/${ONTOLOGY_RID}/actions/${ACTION_API_NAME}/apply`,
     {
@@ -24,12 +27,13 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         parameters: {
-          // Parameter names must match those defined in the Foundry Action Type.
-          // If different, check Ontology Manager → add-certification-record → Parameters.
-          employeeId,
-          certId,
-          issueDate,
-          expiryDate,
+          // Parameter IDs from Foundry Ontology Manager (snake_case)
+          record_id,
+          employee_id: employeeId,
+          cert_id: certId,
+          issue_date: issueDate,
+          expiration_date: expiryDate,
+          status: "Active",
         },
       }),
     }

@@ -24,10 +24,9 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         parameters: {
-          // Parameter names must match those defined in the Foundry Action Type.
-          // If different, check Ontology Manager → flag-employee-for-review → Parameters.
-          employeeId,
-          reviewNotes: reviewNotes ?? "",
+          // Parameter IDs from Foundry Ontology Manager (snake_case)
+          employee_id: employeeId,
+          review_notes: reviewNotes ?? "",
         },
       }),
     }

@@ -24,11 +24,10 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         parameters: {
-          // Parameter names must match those defined in the Foundry Action Type.
-          // If different, check Ontology Manager → renew-certification → Parameters.
-          recordId,
-          issueDate,
-          expiryDate,
+          // Parameter IDs from Foundry Ontology Manager (snake_case)
+          record_id: recordId,
+          issue_date: issueDate,
+          expiration_date: expiryDate,
         },
       }),
     }
