@@ -24,7 +24,8 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         parameters: {
-          record_id: recordId,
+          // "Employee Certification" is an Object-type parameter — pass the primary key
+          employee_certification: recordId,
           issue_date: issueDate,
           expiration_date: expiryDate,
           status: "Active",
