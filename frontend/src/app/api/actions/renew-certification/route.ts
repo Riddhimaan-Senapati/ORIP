@@ -24,10 +24,10 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         parameters: {
-          // Parameter IDs from Foundry Ontology Manager (snake_case)
           record_id: recordId,
           issue_date: issueDate,
           expiration_date: expiryDate,
+          status: "Active",
         },
       }),
     }

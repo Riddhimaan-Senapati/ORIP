@@ -24,9 +24,9 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         parameters: {
-          // Parameter IDs from Foundry Ontology Manager (snake_case)
           employee_id: employeeId,
           review_notes: reviewNotes ?? "",
+          flagged_for_review: true,
         },
       }),
     }
