@@ -1,6 +1,5 @@
 #ignore claude files
 .claude
-.npmrc
 PALANTIR_INTEGRATION.md
 DATASETS.md
 foundry.config.json
