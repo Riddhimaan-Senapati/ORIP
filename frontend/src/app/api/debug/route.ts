@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { foundryClient } from "@/lib/foundry";
+import { getFoundryClient } from "@/lib/foundry";
 import {
   employee as $employee,
   employeeCertification as $empCert,
@@ -12,9 +12,9 @@ export const dynamic = "force-dynamic";
 export async function GET() {
   try {
     const [empPage, certPage, rolePage] = await Promise.all([
-      foundryClient($employee).fetchPage({ $pageSize: 3 }),
-      foundryClient($empCert).fetchPage({ $pageSize: 10 }),
-      foundryClient($role).fetchPage({ $pageSize: 5 }),
+      getFoundryClient()($employee).fetchPage({ $pageSize: 3 }),
+      getFoundryClient()($empCert).fetchPage({ $pageSize: 10 }),
+      getFoundryClient()($role).fetchPage({ $pageSize: 5 }),
     ]);
 
     const employees = empPage.data.map((e) => ({

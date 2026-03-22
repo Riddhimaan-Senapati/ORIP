@@ -1,5 +1,5 @@
 import { unstable_noStore as noStore } from "next/cache";
-import { foundryClient } from "./foundry";
+import { getFoundryClient } from "./foundry";
 import {
   facility as $facility,
   employee as $employee,
@@ -14,31 +14,31 @@ import { facilities as mockFacilities, roles as mockRoles } from "./data";
 
 async function fetchRawFacilities() {
   noStore();
-  const { data } = await foundryClient($facility).fetchPage({ $pageSize: 50 });
+  const { data } = await getFoundryClient()($facility).fetchPage({ $pageSize: 50 });
   return data;
 }
 
 async function fetchRawEmployees() {
   noStore();
-  const { data } = await foundryClient($employee).fetchPage({ $pageSize: 500 });
+  const { data } = await getFoundryClient()($employee).fetchPage({ $pageSize: 500 });
   return data;
 }
 
 async function fetchRawEmpCerts() {
   noStore();
-  const { data } = await foundryClient($empCert).fetchPage({ $pageSize: 500 });
+  const { data } = await getFoundryClient()($empCert).fetchPage({ $pageSize: 500 });
   return data;
 }
 
 async function fetchRawCertifications() {
   noStore();
-  const { data } = await foundryClient($certification).fetchPage({ $pageSize: 100 });
+  const { data } = await getFoundryClient()($certification).fetchPage({ $pageSize: 100 });
   return data;
 }
 
 async function fetchRawRoles() {
   noStore();
-  const { data } = await foundryClient($role).fetchPage({ $pageSize: 50 });
+  const { data } = await getFoundryClient()($role).fetchPage({ $pageSize: 50 });
   return data;
 }
 
