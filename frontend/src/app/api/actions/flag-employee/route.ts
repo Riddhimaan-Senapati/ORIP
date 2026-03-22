@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 const FOUNDRY_URL = process.env.NEXT_PUBLIC_FOUNDRY_URL;
 const FOUNDRY_TOKEN = process.env.FOUNDRY_TOKEN;
 const ONTOLOGY_RID = process.env.NEXT_PUBLIC_FOUNDRY_ONTOLOGY_RID!;
+const ONTOLOGY_NAMESPACE = process.env.NEXT_PUBLIC_FOUNDRY_ONTOLOGY_NAMESPACE!;
 
 // Action API name as set in Foundry Ontology Manager (kebab-case of the display name)
 const ACTION_API_NAME = "flag-employee-for-review";
@@ -24,7 +25,8 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         parameters: {
-          employee_id: employeeId,
+          // Object-type parameters use the fully qualified object type ID as the key
+          [`${ONTOLOGY_NAMESPACE}.employee`]: employeeId,
           review_notes: reviewNotes ?? "",
           flagged_for_review: true,
         },
