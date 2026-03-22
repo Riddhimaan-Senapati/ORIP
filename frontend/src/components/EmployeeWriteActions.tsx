@@ -102,8 +102,8 @@ function RenewModal({ recordId, certName, onClose }: RenewModalProps) {
         await applyRenewCertification(recordId, issueDate, expiryDate);
         router.refresh();
         onClose();
-      } catch {
-        setError("Failed to renew certification. Please try again.");
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Failed to renew certification.");
       }
     });
   }
@@ -266,8 +266,8 @@ function AddCertModal({ employeeId, allCertifications, onClose }: AddCertModalPr
         await applyAddCertification(employeeId, certId, issueDate, expiryDate);
         router.refresh();
         onClose();
-      } catch {
-        setError("Failed to add certification. Please try again.");
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Failed to add certification.");
       }
     });
   }
